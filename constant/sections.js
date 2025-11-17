@@ -219,7 +219,7 @@ export const productGroup = [
         name: "Risk Profiling",
         description:
           "Assess overall risk levels based on various factors including financial, reputational, and regulatory risks.",
-        link: "http://localhost:3000/products/dashboard/kyc/risk-profiling",
+        link: "/products/dashboard/kyc/risk-profiling",
       },
       {
         name: "Address Verification",
