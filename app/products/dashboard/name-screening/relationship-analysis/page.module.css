@@ -1,0 +1,188 @@
+/* ===== Container ===== */
+.container {
+  height: 100vh;
+  background-color: #f9fafb;
+  color: #334155;
+  font-family: "Inter", sans-serif;
+  position: relative;
+}
+
+/* ===== Graph Area ===== */
+.graphArea {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* ===== Top Bar ===== */
+.topBarContainer {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  height: 2.75rem;
+  column-gap: 1.5rem;
+  z-index: 10;
+}
+
+.brand {
+  height: 100%;
+  width: 10.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.brand > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.leftBar,
+.rightBar {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  column-gap: 6px;
+  border-radius: 8px;
+  box-shadow: rgba(15, 23, 42, 0.08) 0px 2px 6px;
+  transition: box-shadow 0.2s ease;
+}
+
+.leftBar:hover,
+.rightBar:hover {
+  box-shadow: rgba(15, 23, 42, 0.12) 0px 3px 8px;
+}
+
+.leftBar > h5 {
+  margin: 0;
+  padding: 0 0.8rem;
+  width: 21rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-left: 1px solid #e2e8f0;
+  border-right: 1px solid #e2e8f0;
+  color: #0f172a;
+}
+
+.leftBar > button {
+  border: none;
+  background-color: transparent;
+  color: #475569;
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.leftBar > button:hover {
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+/* ===== Right Bar ===== */
+.rightBar {
+  justify-content: space-between;
+  padding: 0 0.5rem;
+}
+
+.rightBar > button {
+  border: none;
+  background-color: transparent;
+  color: #475569;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.rightBar > button:hover {
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+.btnRightEdge {
+  border-right: 1px solid #e2e8f0 !important;
+}
+
+/* ===== Sidebar Toggle Button ===== */
+.sidebarBtn {
+  position: absolute;
+  top: 8.5rem;
+  right: 0rem;
+  z-index: 20;
+}
+
+.sidebarBtn > button {
+  border: none;
+  background-color: #2563eb;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  height: 2.8rem;
+  width: 2.5rem;
+  color: white;
+  box-shadow: rgba(15, 23, 42, 0.2) 0px 3px 8px;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sidebarBtn > button:hover {
+  background-color: #1d4ed8;
+  box-shadow: rgba(15, 23, 42, 0.25) 0px 4px 10px;
+}
+
+/* ===== Map Container ===== */
+.mapContainer {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: rgba(15, 23, 42, 0.1) 0px 3px 8px;
+  overflow: hidden;
+}
+
+.map {
+  height: 8.9rem;
+  width: 15rem;
+  background-color: white;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0.2rem;
+}
+
+.map > img {
+  width: 100%;
+  height: 100%;
+}
+
+/* ===== Map Controls ===== */
+.mapControls {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+}
+
+.mapControls > button {
+  border: none;
+  background-color: transparent;
+  color: #475569;
+  font-weight: 500;
+  font-size: 0.85rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.mapControls > button:hover {
+  background-color: #e2e8f0;
+  color: #1e293b;
+}
+
+.graphArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

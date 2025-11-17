@@ -1,0 +1,250 @@
+.container {
+  width: 26rem;
+  top: 5.4rem;
+  right: 0;
+  position: absolute;
+  background-color: #fff;
+  bottom: 0;
+  z-index: 100;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px;
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Close Button - keep your color & shape but improve consistency */
+.closeBtn {
+  position: absolute;
+  left: -19px;
+  top: 1.9rem;
+  border: 1px solid lightgray;
+  background-color: white;
+  border-radius: 50%;
+  height: 2.8rem;
+  width: 2.5rem;
+  color: black;
+  box-shadow: rgba(15, 23, 42, 0.2) 0px 3px 8px;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.closeBtn:hover {
+  background-color: #f3f4f6;
+  box-shadow: rgba(15, 23, 42, 0.25) 0px 4px 10px;
+}
+
+/* Header Section */
+.header {
+  height: 3.4rem;
+  background-color: #f9fafb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0 0.8rem;
+}
+
+.header > button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #374151;
+  padding: 0.4rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.header > button:hover {
+  background-color: #f3f4f6;
+}
+
+.tabs {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  column-gap: 1.2rem;
+  justify-content: center;
+}
+
+.tab {
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #374151;
+  padding-bottom: 0.3rem;
+  transition: color 0.2s ease, border-bottom 0.2s ease;
+}
+
+.tab:first-child {
+  font-weight: 600;
+}
+
+.tab:hover {
+  color: #111827;
+  border-bottom: 2px solid #111827;
+}
+
+/* Category List */
+.categoryItems {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.categoryItem {
+  width: 100%;
+  border-bottom: 1px solid #e5e7eb;
+  transition: background-color 0.2s ease;
+}
+
+.categoryItem:hover {
+  background-color: #f9fafb;
+}
+
+.categoryExpandBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  background-color: transparent;
+  padding: 1rem 1.2rem;
+  font-size: 0.95rem;
+  color: #111827;
+  cursor: pointer;
+  position: relative;
+}
+
+.badgeCount {
+  position: absolute;
+  right: 1rem;
+  color: #ef4444;
+  border: 1px solid #d1d5db;
+  border-radius: 50%;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.itemList {
+  padding: 0.5rem 1.5rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Item */
+.item {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.itemExpandBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  background-color: transparent;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  font-size: 0.92rem;
+  color: #1f2937;
+  transition: background-color 0.2s ease;
+}
+
+.itemExpandBtn:hover {
+  background-color: #f3f4f6;
+}
+
+.symbol {
+  background: linear-gradient(to right, #ef4444, #f59e0b);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  overflow: hidden;
+}
+
+.symbol > img {
+  border-radius: 50%;
+}
+
+/* Expanded Item Properties */
+.itemProperties {
+  padding: 0.8rem 1.3rem 1.3rem;
+  background-color: #fafafa;
+  border-radius: 8px;
+  margin: 0.5rem 0.6rem;
+}
+
+.itemHeader {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.7rem;
+}
+
+.symbolControlsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.8rem;
+}
+
+.btnStretch {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  background-color: #f9fafb;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.88rem;
+  color: #1f2937;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btnStretch:hover {
+  background-color: #f3f4f6;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 3px;
+}
+
+.symbolControlsSub {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+.symbolControlsSub > button {
+  border: 1px solid #d1d5db;
+  background-color: #f9fafb;
+  border-radius: 6px;
+  padding: 0.5rem 0.6rem;
+  font-size: 0.85rem;
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.symbolControlsSub > button:hover {
+  background-color: #f3f4f6;
+}

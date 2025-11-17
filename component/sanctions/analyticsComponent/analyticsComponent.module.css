@@ -1,0 +1,137 @@
+.main {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #f9fafb;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+/* === KPI Cards === */
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.kpiCard {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.kpiCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.kpiCard p {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.kpiCard h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 0.4rem;
+}
+
+.kpiGreen h2 {
+  color: #16a34a;
+}
+
+.kpiRed h2 {
+  color: #dc2626;
+}
+
+.kpiYellow h2 {
+  color: #f59e0b;
+}
+
+.kpiBlue h2 {
+  color: #2563eb;
+}
+
+/* === Charts === */
+.chartGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 1.5rem;
+}
+
+.chartCard,
+.tableCard {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.chartCard:hover,
+.tableCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.chartCard h3,
+.tableCard h3 {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+/* === Table === */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.table th {
+  text-align: left;
+  color: #6b7280;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  font-weight: 600;
+}
+
+.table td {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.table tr:hover td {
+  background-color: #f9fafb;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .main {
+    padding: 1.25rem;
+  }
+
+  .chartGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .kpiGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tableCard {
+    overflow-x: auto;
+  }
+}

@@ -1,0 +1,263 @@
+/* === Container === */
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  font-family: "Inter", sans-serif;
+  color: #1e293b;
+}
+
+/* === Upload Section === */
+.basketArea {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.2rem;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.header h5 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.header p {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+
+/* === Drop Zone === */
+.basketDropZone {
+  border: 2px dashed #3b82f6;
+  height: 130px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 0.5rem;
+  transition: background-color 0.2s, border-color 0.2s;
+  cursor: pointer;
+  background-color: #f9fafb;
+}
+
+.basketDropZone:hover {
+  background-color: #eff6ff;
+  border-color: #2563eb;
+}
+
+.dropZoneHeader {
+  display: flex;
+  align-items: center;
+  column-gap: 0.6rem;
+  color: #334155;
+}
+
+.dropZoneHeader > span {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.basketDropZone > .subtitle {
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* === Drop Zone Footer === */
+.dropZoneFooter {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dropZoneFooter > button {
+  border: none;
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.3);
+}
+
+.dropZoneFooter > button:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* === Statistics Section === */
+.statesWrapper {
+  width: 100%;
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.statesCard {
+  flex: 1;
+  min-width: 180px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+  padding: 1.2rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.4rem;
+  transition: transform 0.2s;
+}
+
+.statesCard:hover {
+  transform: translateY(-3px);
+}
+
+.statesCard h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #334155;
+}
+
+.stateValue {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.stateSubtext {
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+/* === Results Section === */
+.searchResults {
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.searchResultsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.searchResultsHeader h5 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.searchResultsHeader button {
+  border: none;
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.searchResultsHeader button:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* === Table === */
+.searchResults > table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.searchResults > table thead tr {
+  background-color: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.searchResults > table thead th {
+  text-align: left;
+  padding: 0.75rem 0.6rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.searchResults > table tbody tr {
+  border-bottom: 1px solid #f1f5f9;
+  transition: background-color 0.2s;
+}
+
+.searchResults > table tbody tr:hover {
+  background-color: #eff6ff;
+}
+
+.searchResults > table tbody td {
+  padding: 0.75rem 0.6rem;
+  color: #334155;
+}
+
+/* === Status Colors === */
+.statusMatch {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.statusPotential {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.statusClear {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+/* === Action Column === */
+.searchResults > table tbody td:last-child {
+  color: #2563eb;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.searchResults > table tbody td:last-child:hover {
+  color: #1e40af;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .statesWrapper {
+    flex-direction: column;
+  }
+
+  .searchResults > table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .dropZoneFooter {
+    justify-content: center;
+  }
+
+  .dropZoneFooter > button {
+    width: 100%;
+  }
+}
