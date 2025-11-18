@@ -102,7 +102,10 @@ export default function Page() {
                               {item.link ? "Try it free" : "Not available"}
                             </button>
 
-                            <button className={styles.loginBtn}>
+                            <button
+                              onClick={() => router.push("/auth")}
+                              className={styles.loginBtn}
+                            >
                               <span>Login</span>
                               <ChevronRight />
                             </button>
