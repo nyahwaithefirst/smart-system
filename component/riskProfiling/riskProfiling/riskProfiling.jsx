@@ -16,6 +16,7 @@ const customStyles = {
     input: (provided) => ({
         ...provided,
         color: "#111", //Fixes the input text color
+        padding: "4px",
     }),
     menu: (provided) => ({
         ...provided,
@@ -799,6 +800,10 @@ export default function RiskProfilingComponent() {
             <form className={styles.form} onSubmit={handleGenerateWeight}>
                 <h3>Risk Profiling Form</h3>
                 <div className={styles.formGrid}>
+                    <div className={styles.formGroup}>
+                        <label htmlFor="industry">Name</label>
+                        <input type="text" placeholder="Name..." />
+                    </div>
                     <div className={styles.formGroup}>
                         <label htmlFor="industry">Industry</label>
                         <AsyncSelect
