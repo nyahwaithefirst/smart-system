@@ -809,6 +809,7 @@ export default function RiskProfilingComponent() {
                         <AsyncSelect
                             loadOptions={loadIndustryOptions}
                             className={styles.formInput}
+                            defaultOptions={industries}
                             styles={customStyles}
                             onChange={handleWeightAlter}
                         />
@@ -820,6 +821,7 @@ export default function RiskProfilingComponent() {
                             loadOptions={loadOccupationsOptions}
                             className={styles.formInput}
                             styles={customStyles}
+                            defaultOptions={occupations}
                             onChange={handleWeightAlter}
                         />
                     </div>
@@ -830,6 +832,7 @@ export default function RiskProfilingComponent() {
                             loadOptions={loadCustomerTypesOptions}
                             className={styles.formInput}
                             styles={customStyles}
+                            defaultOptions={customerTypes}
                             onChange={handleWeightAlter}
                         />
                     </div>
@@ -840,6 +843,7 @@ export default function RiskProfilingComponent() {
                             loadOptions={loadCountriesOptions}
                             className={styles.formInput}
                             styles={customStyles}
+                            defaultOptions={countries}
                             onChange={handleWeightAlter}
                         />
                     </div>
@@ -850,6 +854,7 @@ export default function RiskProfilingComponent() {
                             loadOptions={loadSanctionsOptions}
                             className={styles.formInput}
                             styles={customStyles}
+                            defaultOptions={sanctions}
                             onChange={handleWeightAlter}
                         />
                     </div>
@@ -860,6 +865,7 @@ export default function RiskProfilingComponent() {
                             loadOptions={loadRegulatoriesOptions}
                             className={styles.formInput}
                             styles={customStyles}
+                            defaultOptions={regulatory}
                             onChange={handleWeightAlter}
                         />
                     </div>
