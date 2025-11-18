@@ -50,18 +50,8 @@
   border: 1px solid #cbd5e1;
   font-size: 0.9rem;
   background-color: #f9fafb;
-  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.formGroup input:focus,
-.formGroup select:focus {
-  outline: none;
-  border-color: #3b82f6;
-  background-color: #ffffff;
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
-}
-
-/* === Form Button === */
 .formFooter {
   display: flex;
   justify-content: flex-end;
@@ -76,15 +66,9 @@
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  transition: background-color 0.2s, transform 0.1s;
 }
 
-.formFooter button:hover {
-  background-color: #2563eb;
-  transform: translateY(-2px);
-}
-
-/* === Results Table === */
+/* === Results === */
 .results {
   background-color: #ffffff;
   padding: 1.5rem;
@@ -101,11 +85,6 @@
 .resultsHeader h5 {
   margin: 0;
   font-weight: 700;
-}
-
-.resultsHeader i {
-  color: #64748b;
-  font-size: 0.9rem;
 }
 
 .results table {
@@ -127,16 +106,11 @@
 
 .results tbody tr {
   border-bottom: 1px solid #f1f5f9;
-  transition: background-color 0.2s;
-}
-
-.results tbody tr:hover {
-  background-color: #eff6ff;
 }
 
 /* === Status Badges === */
 .statusMatch {
-  color: #dc2626;
+  color: #2563eb;
   font-weight: 600;
 }
 
@@ -146,11 +120,11 @@
 }
 
 .statusClear {
-  color: #16a34a;
+  color: #64748b;
   font-weight: 600;
 }
 
-/* === Risk Rating Badges === */
+/* === Risk Colors === */
 .highRisk {
   color: #dc2626;
   font-weight: 600;
@@ -162,27 +136,31 @@
 }
 
 .lowRisk {
-  color: #22c55e;
+  color: #16a34a;
   font-weight: 600;
 }
 
-/* === Action Column === */
-.results tbody td:last-child {
+/* === No match row === */
+.noMatch {
+  text-align: center;
+  padding: 1rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+/* === Action column === */
+.viewAction {
   color: #2563eb;
   font-weight: 600;
   cursor: pointer;
 }
 
-.results tbody td:last-child:hover {
+.viewAction:hover {
   color: #1e40af;
 }
 
-/* === Responsive === */
 @media (max-width: 768px) {
   .formGrid {
     grid-template-columns: 1fr;
-  }
-  .formFooter {
-    justify-content: center;
   }
 }
