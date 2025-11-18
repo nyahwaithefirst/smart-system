@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import styles from "./riskProfiling.module.css";
 import AsyncSelect from "react-select/async";
 
@@ -33,6 +34,8 @@ const customStyles = {
 };
 
 export default function RiskProfilingComponent() {
+
+    const [selectedOptions, setSelectedOptions] = useState([]);
 
     const customerTypes = [
         { value: "ASSOCIATION/SOCIETY", label: "ASSOCIATION/SOCIETY", weight: 2 },
@@ -755,10 +758,45 @@ export default function RiskProfilingComponent() {
         callback(filtered);
     }
 
+    const handleWeightAlter = (selectedOption) => {
+        setSelectedOptions([...selectedOptions, { value: selectedOption.value, weight: selectedOption.weight }]);
+    }
+
+    const handleGenerateWeight = (event) => {
+        event.preventDefault();
+
+        let count = 0;
+        let weightCount = 0;
+
+        selectedOptions.forEach((option => {
+            const { weight } = option;
+
+            if (weight) {
+                count++;
+                weightCount += Number(weight);
+            }
+        }))
+
+        const average = weightCount / count;
+
+        //define legend class
+        if (average >= 1 && average < 2) {
+            alert("Low Risk");
+        }
+        else if (average >= 2 < average < 3.5) {
+            alert("Medium Risk");
+        }
+        else {
+            alert("High Risk");
+        }
+
+        alert(average);
+    }
+
     return (
         <div className={styles.container}>
             {/* === Risk Profiling Form === */}
-            <form className={styles.form}>
+            <form className={styles.form} onSubmit={handleGenerateWeight}>
                 <h3>Risk Profiling Form</h3>
                 <div className={styles.formGrid}>
                     <div className={styles.formGroup}>
@@ -767,6 +805,7 @@ export default function RiskProfilingComponent() {
                             loadOptions={loadIndustryOptions}
                             className={styles.formInput}
                             styles={customStyles}
+                            onChange={handleWeightAlter}
                         />
                     </div>
 
@@ -776,6 +815,7 @@ export default function RiskProfilingComponent() {
                             loadOptions={loadOccupationsOptions}
                             className={styles.formInput}
                             styles={customStyles}
+                            onChange={handleWeightAlter}
                         />
                     </div>
 
@@ -785,6 +825,7 @@ export default function RiskProfilingComponent() {
                             loadOptions={loadCustomerTypesOptions}
                             className={styles.formInput}
                             styles={customStyles}
+                            onChange={handleWeightAlter}
                         />
                     </div>
 
@@ -794,6 +835,7 @@ export default function RiskProfilingComponent() {
                             loadOptions={loadCountriesOptions}
                             className={styles.formInput}
                             styles={customStyles}
+                            onChange={handleWeightAlter}
                         />
                     </div>
 
@@ -803,6 +845,7 @@ export default function RiskProfilingComponent() {
                             loadOptions={loadSanctionsOptions}
                             className={styles.formInput}
                             styles={customStyles}
+                            onChange={handleWeightAlter}
                         />
                     </div>
 
@@ -812,6 +855,7 @@ export default function RiskProfilingComponent() {
                             loadOptions={loadRegulatoriesOptions}
                             className={styles.formInput}
                             styles={customStyles}
+                            onChange={handleWeightAlter}
                         />
                     </div>
                 </div>
@@ -867,6 +911,6 @@ export default function RiskProfilingComponent() {
                     </tbody>
                 </table>
             </div>
-        </div>
+        </div >
     );
 }
