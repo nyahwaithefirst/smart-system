@@ -1,0 +1,207 @@
+/* Sidebar */
+.sidebar {
+  width: 15rem;
+  background-color: white;
+  box-shadow: 0 8px 12px -3px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  border-right: 1px solid #e5e7eb;
+}
+
+.sidebarHeader {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.logoSmart,
+.logoAnalysi {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.logoSmart {
+  color: #2563eb;
+}
+
+.logoAnalysi {
+  color: #1f2937;
+}
+
+/* Navigation */
+.nav {
+  padding: 0.75rem 0;
+}
+
+.menuLabel {
+  padding: 0 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.menuLabel p {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.menuItem {
+  margin-bottom: 0.15rem;
+}
+
+.menuButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.75rem;
+  color: #374151;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 150ms;
+}
+
+.menuButton:hover {
+  background-color: #f3f4f6;
+}
+
+.menuButtonExpanded {
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+
+.menuButtonContent {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.iconExpanded {
+  color: #2563eb;
+}
+
+.menuTitle {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.chevron {
+  width: 0.75rem;
+  height: 0.75rem;
+  color: #9ca3af;
+}
+
+/* Submenu */
+.submenu {
+  background-color: #f9fafb;
+  padding: 0.15rem 0;
+}
+
+.submenuButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.75rem 0.375rem 2.25rem;
+  font-size: 0.75rem;
+  color: #4b5563;
+  background: transparent;
+  border: none;
+  border-left: 3px solid transparent;
+  cursor: pointer;
+  transition: all 150ms;
+  text-align: left;
+}
+
+.submenuButton:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.submenuButtonActive {
+  background-color: #2563eb;
+  color: white;
+  border-left-color: #1e40af;
+}
+
+.submenuIcon {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.submenuIconActive {
+  color: white;
+}
+
+/* General Section */
+.generalSection {
+  margin-top: 1rem;
+  padding: 0 0.75rem;
+}
+
+.generalLabel {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.generalButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  color: #374151;
+  background: transparent;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 150ms;
+}
+
+.generalButton:hover {
+  background-color: #f3f4f6;
+}
+
+.generalButton svg {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* Make scrollbar thin and visible only on hover */
+.sidebar {
+  scrollbar-width: none; /* Firefox */
+  scrollbar-color: transparent transparent; /* Hide by default in Firefox */
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 2px; /* Thin scrollbar */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Hidden by default */
+  border-radius: 3px;
+}
+
+.sidebar:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(107, 114, 128, 0.6); /* Visible on hover */
+}
+
+.sidebar:hover {
+  scrollbar-color: rgba(107, 114, 128, 0.6) transparent; /* Firefox visible on hover */
+}

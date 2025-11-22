@@ -117,136 +117,117 @@ export const sections = {
 export const productGroup = [
   {
     name: "Name Screening",
-    description:
-      "Verify and monitor individuals or entities against global watchlists, sanctions, and PEPs to manage risk and ensure compliance.",
+    description: "Screen names against sanctions, PEPs, and watchlists.",
     products: [
       {
-        name: "Sanctions",
-        description:
-          "Monitor individuals and entities against global sanctions lists to prevent regulatory violations.",
+        name: "Name Screening",
+        description: "Check entities against global sanctions lists.",
         link: "/products/dashboard/name-screening/sanctions",
       },
       {
         name: "Politically Exposed Person",
-        description:
-          "Identify and screen politically exposed persons (PEPs) to manage compliance and risk.",
+        description: "Identify and screen politically exposed persons.",
         link: "/products/dashboard/name-screening/pep",
       },
       {
         name: "Watchlist",
-        description:
-          "Check individuals or entities against internal and external watchlists for potential risks.",
+        description: "Screen names against internal and external watchlists.",
       },
       {
         name: "Relationship Analysis",
-        description:
-          "Analyze connections between entities and individuals to detect hidden risks or associations.",
+        description: "Analyze links between people and entities.",
         link: "/products/dashboard/name-screening/relationship-analysis",
       },
       {
         name: "Match Scoring Percentage",
-        description:
-          "Assess the likelihood of a name match with high accuracy using advanced scoring metrics.",
+        description: "Measure match accuracy using scoring metrics.",
       },
       {
         name: "Adverse Media",
-        description:
-          "Scan global media sources for negative news or reputational risks linked to individuals or entities.",
+        description: "Detect negative news involving individuals or entities.",
         link: "/products/dashboard/name-screening/adverse-media",
       },
     ],
   },
   {
-    name: "Transaction Screening",
-    description:
-      "Monitor and analyze financial transactions in real-time to detect suspicious activity, fraud, and compliance risks.",
+    name: "Suspicious Transactions",
+    description: "Screen transactions in real time for risks.",
     products: [
       {
         name: "Suspicious Transaction Flagging Rules",
-        description:
-          "Automatically identify and flag transactions that may indicate money laundering or other suspicious activity.",
+        description: "Flag potentially suspicious transactions automatically.",
       },
       {
         name: "Fraud Detection Rules",
-        description:
-          "Detect and prevent fraudulent transactions using advanced rule-based and analytical methods.",
+        description: "Detect possible fraudulent transactions.",
       },
-    ],
-  },
-  {
-    name: "Transaction Monitoring",
-    description:
-      "Continuously track and analyze financial transactions to detect suspicious activity, prevent fraud, and ensure regulatory compliance.",
-    products: [
       {
         name: "Client Activity Dashboard",
-        description:
-          "Visualize and monitor customer transactions to identify unusual or high-risk behavior.",
+        description: "Monitor customer activity and unusual behavior.",
       },
       {
         name: "Fraud Activity Dashboard",
-        description:
-          "Track and analyze potential fraudulent activities in real-time for quick action.",
+        description: "Track activity linked to potential fraud.",
       },
       {
         name: "Financial Crime Reports",
-        description:
-          "Generate detailed reports on financial crime patterns and suspicious transactions for compliance purposes.",
+        description: "Generate reports on suspicious or risky activity.",
       },
       {
         name: "Transaction Detection",
-        description:
-          "Automatically detect and flag high-risk or suspicious transactions to mitigate risk.",
+        description: "Automatically detect high-risk transactions.",
       },
     ],
   },
   {
-    name: "Know Your Customer/Business",
-    description:
-      "Verify and assess individuals or businesses to manage risk, ensure compliance, and build trust.",
+    name: "Know Your Customer",
+    description: "Verify customers for compliance.",
     products: [
       {
-        name: "Social Media Profiling",
-        description:
-          "Analyze social media presence to gain insights into reputation, connections, and behavior.",
-      },
-      {
-        name: "Criminal Record Profiling",
-        description:
-          "Check criminal records to identify potential risks associated with individuals or businesses.",
-      },
-      {
         name: "Risk Profiling",
-        description:
-          "Assess overall risk levels based on various factors including financial, reputational, and regulatory risks.",
+        description: "Assess overall customer risk levels.",
         link: "/products/dashboard/kyc/risk-profiling",
       },
       {
+        name: "Social Media Profiling",
+        description: "Analyze social media for behavior and reputation.",
+      },
+      {
+        name: "Criminal Record Profiling",
+        description: "Check criminal history for potential risks.",
+      },
+
+      {
         name: "Address Verification",
-        description:
-          "Confirm the validity of customer addresses to prevent fraud and ensure accurate records.",
+        description: "Confirm customer address accuracy.",
       },
       {
         name: "ID Verification",
-        description:
-          "Validate official identification documents to confirm identity and prevent impersonation.",
+        description: "Validate identity documents.",
       },
       {
         name: "Credit Score",
-        description:
-          "Evaluate financial reliability and creditworthiness to make informed decisions.",
+        description: "Review customer creditworthiness.",
       },
     ],
   },
   {
     name: "Escalation (Alert Management Workflow)",
-    description:
-      "Manage, track, and resolve alerts efficiently to ensure timely action and compliance with regulatory requirements.",
+    description: "Manage and resolve compliance alerts.",
     products: [
       {
         name: "Document Management",
-        description:
-          "Organize, store, and track alert-related documents to streamline the investigation and resolution process.",
+        description: "Organize and track alert-related documents.",
+      },
+    ],
+  },
+  {
+    name: "Adverse Media",
+    description: "Screening against adverse media",
+    products: [
+      {
+        name: "Document Management",
+        description: "Organize and track alert-related documents.",
       },
     ],
   },

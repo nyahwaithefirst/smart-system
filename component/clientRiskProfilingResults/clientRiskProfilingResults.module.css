@@ -1,0 +1,118 @@
+.container {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: "Inter", sans-serif;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.header > h5 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* Summary */
+.summarySection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.profileImage {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #eaeaea;
+  object-fit: cover;
+}
+
+.summaryText {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Main Table Card */
+.tableCard {
+  background: #fafafa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #ececec;
+  margin-bottom: 2rem;
+}
+
+.clientName {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Results Table */
+.resultsTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+
+.resultsTable thead {
+  background-color: #f3f3f3;
+}
+
+.resultsTable th,
+.resultsTable td {
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #eee;
+  color: #333;
+  text-align: left;
+}
+
+.resultsTable tbody tr:hover {
+  background-color: #f7f7f7;
+  transition: 0.2s ease-in-out;
+}
+
+/* Additional Sections */
+.sectionCard {
+  background: #ffffff;
+  border: 1px solid #ececec;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.sectionTitle {
+  margin: 0 0 1rem 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.sectionContent {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.list {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.list li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #444;
+}
