@@ -32,7 +32,6 @@ import styles from "./page.module.css";
 import NameScreeningEngine from "../../component/nameScreeningEngine/nameScreeningEngine";
 import ClientRiskProflingEngine from "../../component/clientRiskProfilingEngine/clientRiskProfilingEngine";
 import EntityRiskProflingEngine from "../../component/entityRiskProfilingEngine/entityRiskProfilingEngine";
-import FlaggingRules from "../../component/flaggingRules/flaggingRules";
 import EntityNameScreeningEngine from "../../component/entityNameScreeningEngine/entityNameScreeningEngine";
 import FlaggingRulesEngine from "../../component/flaggingRulesEngine/flaggingRulesEngine";
 import FlaggingRulesConfigurations from "../../component/flaggingRulesConfigurations/flaggingRulesConfigurations";
@@ -449,7 +448,6 @@ export default function Page() {
   };
 
   const handleItemClick = (itemId) => {
-    alert(itemId);
     setSelectedItem(itemId);
   };
 
