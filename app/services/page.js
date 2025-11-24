@@ -39,6 +39,7 @@ import FlaggingRulesConfigurations from "../../component/flaggingRulesConfigurat
 import AccountRules from "../../component/accountRules/accountRules";
 import Sidebar from "../../component/sidebar/sidebar";
 import FraudDetection from "../../component/fraudDetection/fraudDection";
+import TopBar from "../../component/topBar/topBar";
 
 export default function Page() {
   const [expandedItems, setExpandedItems] = useState({});
@@ -66,20 +67,7 @@ export default function Page() {
       />
       {/* Main Content Area */}
       <div className={styles.mainContent}>
-        <div className={styles.topBar}>
-          <div className={styles.topBarRight}>
-            <Search size={18} className={styles.topIcon} />
-
-            <Bell size={18} className={styles.topIcon} />
-
-            <Mail size={18} className={styles.topIcon} />
-
-            <div className={styles.userSection}>
-              <User2 size={20} className={styles.userIcon} />
-              <span className={styles.username}>John Doe</span>
-            </div>
-          </div>
-        </div>
+        <TopBar />
         <div className={styles.header}>
           <h2 className={styles.headerTitle}>
             {selectedItem

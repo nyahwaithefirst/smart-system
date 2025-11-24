@@ -17,7 +17,7 @@
 }
 
 .mainTitle {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #1e293b;
 }
@@ -111,6 +111,10 @@
   max-width: 400px;
 }
 
+.form > h3 {
+  font-size: 1rem;
+}
+
 .form input {
   padding: 0.5rem 0.75rem;
   border-radius: 0.35rem;
@@ -133,6 +137,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.sectionHeader > h3 {
+  font-size: 1rem;
 }
 
 .addBtn {

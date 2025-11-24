@@ -196,71 +196,27 @@
   overflow-y: auto;
 }
 
-.topBar {
-  width: 100%;
-  height: 3.55rem;
-  background: white;
-  border-bottom: 1px solid #e5e7eb;
-  padding: 0 1.25rem;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
-}
-
-.topBarRight {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.topIcon {
-  color: #6b7280;
-  cursor: pointer;
-  transition: 0.15s;
-}
-
-.topIcon:hover {
-  color: #1e3a8a;
-}
-
-.userSection {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 0.35rem 0.6rem;
-  border-radius: 0.4rem;
-  background: #f3f4f6;
-  cursor: pointer;
-}
-
-.userIcon {
-  color: #1e3a8a;
-}
-
-.username {
-  font-size: 0.8rem;
-  color: #374151;
-  font-weight: 500;
-}
-
 .header {
   background-color: white;
   border-bottom: 1px solid #e5e7eb;
-  padding: 1rem 1.5rem;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  padding: 0.5rem 1.5rem;
 }
 
 .headerTitle {
-  font-size: 1.35rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #1e3a8a;
+  margin: 0;
 }
 
 .headerSubtitle {
-  margin-top: 0.15rem;
   color: #4b5563;
   font-size: 0.8rem;
+  margin: 0;
 }
 
 .content {
