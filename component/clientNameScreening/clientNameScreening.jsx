@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { Upload, FileText, Check, AlertCircle, Plus, Trash2 } from 'lucide-react';
 import styles from './clientNameScreening.module.css';
 import { serviceBaseUrl } from '../../constant/baseUrl';
+import { getApi } from '../../apis';
 
-const ClientNameScreening = ({ setDataSubmitted }) => {
+const ClientNameScreening = ({ setDataSubmitted, results, setResults }) => {
     const [activeTab, setActiveTab] = useState('manual'); // 'manual' or 'csv'
     const [isLoading, setLoading] = useState(false);
 
@@ -148,8 +149,39 @@ const ClientNameScreening = ({ setDataSubmitted }) => {
         console.log('Manual form submitted:', manualRows);
         // alert(`Successfully submitted ${manualRows.length} row(s)! Check console for details.`);
 
-        manualRows.forEach((row) => {
-            const url = `${serviceBaseUrl}pep/search/Tendai`;
+        manualRows.forEach(async (row) => {
+
+            let content = "";
+
+            if (row["First Name"]) {
+                content = row["First Name"];
+            }
+
+            if (row["Last Name"]) {
+
+                if (content.length > 0) {
+                    content += " " + row["Last Name"];
+                }
+                else {
+                    content = row["Last Name"];
+                }
+            }
+
+            const urlPep = `${serviceBaseUrl}pep/search/${content}`;
+            const responsePep = await getApi(urlPep);
+
+            setResults((prev) => ({
+                ...prev,
+                pepList: responsePep,
+            }));
+
+            const urlSanction = `${serviceBaseUrl}sanctions/${content}`;
+            const responseSanction = await getApi(urlSanction);
+
+            setResults((prev) => ({
+                ...prev,
+                sanctionList: responseSanction,
+            }));
         })
 
         //Simulate data screening

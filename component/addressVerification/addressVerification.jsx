@@ -12,7 +12,9 @@ import VectorSource from "ol/source/Vector";
 import { Feature } from "ol";
 import Point from "ol/geom/Point";
 import { Icon, Style } from "ol/style";
-import { ChartNoAxesGantt, ChevronRight, MapPin, Search } from "lucide-react";
+import { ChevronRight, MapPin, Search } from "lucide-react";
+import { serviceBaseUrl } from "../../constant/baseUrl";
+import { getApi } from "../../apis";
 
 const AddressVerification = () => {
     const containerRef = useRef(null);
@@ -56,7 +58,15 @@ const AddressVerification = () => {
         if (!searchText) return;
 
         // In real case: replace this with API call
-        setResults(sampleResults);
+        try {
+            const url = `${serviceBaseUrl}address/search-address-list/${searchText}`;
+            const results = await getApi(url);
+
+            setResults(results);
+        }
+        catch (error) {
+            alert("Error occured");
+        }
     };
 
     // --- Map Init ---

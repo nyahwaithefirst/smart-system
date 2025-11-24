@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Upload, FileText, Check, AlertCircle, Plus, Trash2 } from "lucide-react";
 import styles from "./clientRiskProfiling.module.css";
 
-const ClientRiskProfiling = ({ setDataSubmitted }) => {
+const ClientRiskProfiling = ({ setDataSubmitted, setResults }) => {
     const [activeTab, setActiveTab] = useState("manual");
     const [isLoading, setLoading] = useState(false);
 

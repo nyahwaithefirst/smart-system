@@ -7,33 +7,9 @@ import "jspdf-autotable";
 
 import styles from "./clientNameScreeningResults.module.css";
 
-const ClientNameScreeningResults = ({ setDataSubmitted }) => {
+const ClientNameScreeningResults = ({ setDataSubmitted, results }) => {
     const tableRef = useRef(null);
     const [indexTab, setIndexTab] = useState(1);
-
-    const data = [
-        {
-            name: "Emmerson Dambudzo",
-            pass: "Passport, AD005865",
-            country: "Zimbabwe / (Linked To: MNANGAGWA, Emmerson Dambudzo)",
-            info: "OFAC",
-            list: "Sanctions",
-        },
-        {
-            name: "Emmerson Dambudzo",
-            pass: "Passport, AD005865",
-            country: "Zimbabwe / (Linked To: MNANGAGWA, Emmerson Dambudzo)",
-            info: "OFAC",
-            list: "Sanctions",
-        },
-        {
-            name: "Emmerson Dambudzo",
-            pass: "Passport, AD005865",
-            country: "Zimbabwe / (Linked To: MNANGAGWA, Emmerson Dambudzo)",
-            info: "OFAC",
-            list: "Sanctions",
-        },
-    ];
 
     /* -------------------- CSV EXPORT -------------------- */
     const exportToCSV = () => {
@@ -82,7 +58,7 @@ const ClientNameScreeningResults = ({ setDataSubmitted }) => {
             <div className={styles.headerRow}>
                 <div className={styles.tabs}>
                     <div onClick={() => setIndexTab(1)} className={`${styles.tab} ${indexTab === 1 && styles.tabActive}`}>
-                        <span className={styles.badge}>2</span>
+                        <span className={styles.badge}>{results["sanctionList"].length}</span>
                         <span>Sanctions List</span>
                     </div>
                     <div onClick={() => setIndexTab(2)} className={`${styles.tab} ${indexTab === 2 && styles.tabActive}`}>
@@ -90,7 +66,7 @@ const ClientNameScreeningResults = ({ setDataSubmitted }) => {
                         <span>Watch List</span>
                     </div>
                     <div onClick={() => setIndexTab(3)} className={`${styles.tab} ${indexTab === 3 && styles.tabActive}`}>
-                        <span className={styles.badge}>5</span>
+                        <span className={styles.badge}>{results["pepList"].length}</span>
                         <span>PEP List</span>
                     </div>
                 </div>
@@ -115,21 +91,21 @@ const ClientNameScreeningResults = ({ setDataSubmitted }) => {
                         <thead>
                             <tr>
                                 <th>Name</th>
-                                <th>Passport</th>
                                 <th>Country</th>
-                                <th>Info</th>
-                                <th>List</th>
+                                <th>Sanctions</th>
+                                <th>Identifiers</th>
+                                <th>Dataset</th>
                             </tr>
                         </thead>
 
                         <tbody>
-                            {data.map((row, i) => (
+                            {results["sanctionList"].map((row, i) => (
                                 <tr key={i}>
                                     <td>{row.name}</td>
-                                    <td>{row.pass}</td>
-                                    <td>{row.country}</td>
-                                    <td>{row.info}</td>
-                                    <td>{row.list}</td>
+                                    <td>{row.countries}</td>
+                                    <td>{row.sanctions}</td>
+                                    <td>{row.identifiers}</td>
+                                    <td>{row.dataset}</td>
                                 </tr>
                             ))}
                         </tbody>
@@ -150,7 +126,7 @@ const ClientNameScreeningResults = ({ setDataSubmitted }) => {
                         </thead>
 
                         <tbody>
-                            {data.map((row, i) => (
+                            {[].map((row, i) => (
                                 <tr key={i}>
                                     <td>{row.name}</td>
                                     <td>{row.pass}</td>
@@ -169,21 +145,21 @@ const ClientNameScreeningResults = ({ setDataSubmitted }) => {
                         <thead>
                             <tr>
                                 <th>Name</th>
-                                <th>Passport</th>
-                                <th>Country</th>
-                                <th>Info</th>
-                                <th>List</th>
+                                <th>Gender</th>
+                                <th>Address</th>
+                                <th>Education</th>
+                                <th>Career</th>
                             </tr>
                         </thead>
 
                         <tbody>
-                            {data.map((row, i) => (
+                            {results["pepList"].map((row, i) => (
                                 <tr key={i}>
-                                    <td>{row.name}</td>
-                                    <td>{row.pass}</td>
-                                    <td>{row.country}</td>
-                                    <td>{row.info}</td>
-                                    <td>{row.list}</td>
+                                    <td>{row.pepName}</td>
+                                    <td>{row.pepGender}</td>
+                                    <td>{row.pepHomeAddress}</td>
+                                    <td>{row.pepEducation}</td>
+                                    <td>{row.pepCareer}</td>
                                 </tr>
                             ))}
                         </tbody>

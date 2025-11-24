@@ -9,14 +9,19 @@ const EntityNameScreeningEngine = () => {
     const clientNameScreeningRef = useRef(null);
 
     const [isDataSubmitted, setDataSubmitted] = useState(false);
+    const [results, setResults] = useState([]);
 
     return (
         !isDataSubmitted ?
             <EntityNameScreening
                 ref={clientNameScreeningRef}
                 setDataSubmitted={setDataSubmitted}
+                setResults={setResults}
             /> :
-            <EntityNameScreeningResults setDataSubmitted={setDataSubmitted} />
+            <EntityNameScreeningResults
+                setDataSubmitted={setDataSubmitted}
+                results={results}
+            />
     )
 }
 
