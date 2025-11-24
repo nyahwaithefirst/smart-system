@@ -178,7 +178,7 @@ const ClientRiskProfiling = ({ setDataSubmitted }) => {
 
                             <div className={styles.formActions}>
                                 <button type="submit" className={styles.submitButton}>
-                                    {isLoading ? "Submitting..." : "Submit All Data"}
+                                    {isLoading ? "Submitting..." : "Run Profile"}
                                 </button>
                             </div>
                         </form>

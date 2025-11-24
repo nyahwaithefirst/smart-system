@@ -40,6 +40,7 @@ import AccountRules from "../../component/accountRules/accountRules";
 import Sidebar from "../../component/sidebar/sidebar";
 import FraudDetection from "../../component/fraudDetection/fraudDection";
 import TopBar from "../../component/topBar/topBar";
+import AddressVerification from "../../component/addressVerification/addressVerification";
 
 export default function Page() {
   const [expandedItems, setExpandedItems] = useState({});
@@ -136,6 +137,13 @@ export default function Page() {
             selectedItem === "fraud-detection" && (
               <div className={styles.contentWrapper}>
                 <FraudDetection />
+              </div>
+            )}
+          {selectedItem &&
+            contentData[selectedItem] &&
+            selectedItem === "address-verification" && (
+              <div className={styles.contentWrapper}>
+                <AddressVerification />
               </div>
             )}
         </div>

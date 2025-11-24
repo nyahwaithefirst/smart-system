@@ -242,7 +242,7 @@ const EntityNameScreening = ({ setDataSubmitted }) => {
 
                         <div className={styles.formActions}>
                             <button type="submit" className={styles.submitButton}>
-                                {isLoading ? "Loading..." : "Submit All Data"}
+                                {isLoading ? "Loading..." : "Submit"}
                             </button>
                         </div>
                     </form>

@@ -1,0 +1,1 @@
+export const serviceBaseUrl = "http://localhost:8095/api/v1/";

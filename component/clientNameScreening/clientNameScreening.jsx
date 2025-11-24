@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Upload, FileText, Check, AlertCircle, Plus, Trash2 } from 'lucide-react';
 import styles from './clientNameScreening.module.css';
+import { serviceBaseUrl } from '../../constant/baseUrl';
 
 const ClientNameScreening = ({ setDataSubmitted }) => {
     const [activeTab, setActiveTab] = useState('manual'); // 'manual' or 'csv'
@@ -147,6 +148,10 @@ const ClientNameScreening = ({ setDataSubmitted }) => {
         console.log('Manual form submitted:', manualRows);
         // alert(`Successfully submitted ${manualRows.length} row(s)! Check console for details.`);
 
+        manualRows.forEach((row) => {
+            const url = `${serviceBaseUrl}pep/search/Tendai`;
+        })
+
         //Simulate data screening
         setLoading(true);
 
@@ -254,7 +259,7 @@ const ClientNameScreening = ({ setDataSubmitted }) => {
 
                         <div className={styles.formActions}>
                             <button type="submit" className={styles.submitButton}>
-                                {isLoading ? "Loading..." : "Submit All Data"}
+                                {isLoading ? "Loading..." : "Submit"}
                             </button>
                         </div>
                     </form>

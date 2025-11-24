@@ -155,7 +155,7 @@ export default function EntityRiskProfiling() {
                         ))}
 
                         <div className={styles.formActions}>
-                            <button className={styles.submitButton}>Submit</button>
+                            <button className={styles.submitButton}>Run Profile</button>
                         </div>
                     </div>
 
