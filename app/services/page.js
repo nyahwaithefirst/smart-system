@@ -146,6 +146,13 @@ export default function Page() {
                 <AddressVerification />
               </div>
             )}
+          {selectedItem &&
+            contentData[selectedItem] &&
+            selectedItem === "social-media" && (
+              <div className={styles.contentWrapper}>
+                <AddressVerification />
+              </div>
+            )}
         </div>
       </div>
     </div>
