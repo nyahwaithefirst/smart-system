@@ -177,8 +177,6 @@ const SocialMedia = ({ setDataSubmitted, results, setResults }) => {
             const urlSocial = `${serviceBaseUrl}reservoir/social-media-profiling/${content}`;
             const responseSocial = await getApi(urlSocial);
 
-            alert(typeof responseSocial);
-
             setResults((prev) => ({
                 ...prev,
                 socialMediaList: responseSocial,
