@@ -41,6 +41,7 @@ import Sidebar from "../../component/sidebar/sidebar";
 import FraudDetection from "../../component/fraudDetection/fraudDection";
 import TopBar from "../../component/topBar/topBar";
 import AddressVerification from "../../component/addressVerification/addressVerification";
+import SocialMediaEngine from "../../component/socialMediaEngine/socialMediaEngine";
 
 export default function Page() {
   const [expandedItems, setExpandedItems] = useState({});
@@ -150,7 +151,7 @@ export default function Page() {
             contentData[selectedItem] &&
             selectedItem === "social-media" && (
               <div className={styles.contentWrapper}>
-                <AddressVerification />
+                <SocialMediaEngine />
               </div>
             )}
         </div>

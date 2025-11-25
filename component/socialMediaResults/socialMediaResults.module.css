@@ -1,0 +1,215 @@
+/* ----------------- CONTAINER ----------------- */
+.container {
+  background-color: #ffffff;
+  padding: 2rem;
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  flex: 1;
+}
+
+/* ----------------- HEADER ROW ----------------- */
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* ----------------- TABS ----------------- */
+.tabs {
+  display: flex;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.9rem;
+  background: #f3f4f6;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  font-size: 0.82rem;
+  border-bottom: 2px solid transparent;
+  color: #374151;
+}
+
+.tab:hover {
+  background: #e5e7eb;
+}
+
+.tabActive {
+  background: #ffffff;
+  border-bottom: 2px solid #2563eb;
+  color: #2563eb;
+}
+
+.badge {
+  background-color: #2563eb;
+  min-height: 18px;
+  min-width: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+/* ----------------- ACTION BUTTONS ----------------- */
+.actions {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.goBackBtn,
+.exportBtn {
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: 0.2s ease-out;
+}
+
+.goBackBtn {
+  background: #6b7280;
+  color: white;
+}
+
+.goBackBtn:hover {
+  background: #4b5563;
+}
+
+.exportBtn {
+  background: #2563eb;
+  color: white;
+}
+
+.exportBtn:hover {
+  background: #1d4ed8;
+}
+
+/* ----------------- TABLE WRAPPER ----------------- */
+.table {
+  margin-top: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: auto;
+  max-height: 70vh;
+}
+
+/* Sticky Header */
+.table thead th {
+  position: sticky;
+  top: 0;
+  background: #f9fafb;
+  z-index: 10;
+}
+
+/* ----------------- TABLE ----------------- */
+.table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.table th {
+  text-align: left;
+  padding: 0.7rem;
+  font-weight: 600;
+  border-bottom: 1px solid #e5e7eb;
+  color: #374151;
+}
+
+.table td {
+  padding: 0.65rem;
+  color: #4b5563;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.table tbody tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+.table tbody tr:hover {
+  background: #eef2ff;
+  transition: background 0.2s ease;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ----------------- SEARCH BAR ----------------- */
+.searchWrapper {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.searchInput {
+  padding: 0.5rem 0.75rem;
+  width: 220px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.searchInput:focus {
+  border-color: #2563eb;
+}
+
+/* ----------------- PAGINATION ----------------- */
+.pagination {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pageButton {
+  background: #e5e7eb;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: 0.2s;
+}
+
+.pageButton:hover {
+  background: #d1d5db;
+}
+
+.pageInfo {
+  font-size: 0.78rem;
+  color: #4b5563;
+}
+
+/* ----------------- EXPANDABLE ROWS ----------------- */
+.expandBtn {
+  cursor: pointer;
+  color: #2563eb;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.expandBtn:hover {
+  color: #1d4ed8;
+}
+
+.expandedContent {
+  background: #f9fafb;
+  padding: 1rem;
+  border-top: 1px solid #e5e7eb;
+  color: #374151;
+  font-size: 0.8rem;
+}
