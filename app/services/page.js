@@ -73,7 +73,7 @@ export default function Page() {
           <h2 className={styles.headerTitle}>
             {selectedItem
               ? contentData[selectedItem]?.title
-              : "Compliance Management Dashboard"}
+              : "Financial Crime Management"}
           </h2>
           <p className={styles.headerSubtitle}>
             {selectedItem
