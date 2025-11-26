@@ -38,7 +38,7 @@ export default function Page() {
                 {/* Logo and Header */}
                 <div className={styles.header}>
                     <div className={styles.logoBox}>
-                        <Image className={styles.logoIcon} />
+                        <Search className={styles.logoIcon} />
                     </div>
                     <h1 className={styles.title}>Smart Analysi</h1>
                     <p className={styles.subtitle}>Sign in to your account</p>
