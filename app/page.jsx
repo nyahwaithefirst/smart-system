@@ -17,7 +17,7 @@ export default function Home() {
             setMessage("Swicthing to services....")
         }, 2000)
         setTimeout(() => {
-            window.location = "/services";
+            window.location = "/login";
         }, 2000)
     }, [])
 
