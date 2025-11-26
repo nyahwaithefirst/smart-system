@@ -15,10 +15,10 @@ export default function Home() {
                     <img className={styles.logo} src={"/logo.png"} />
                 </div>
                 <div className={styles.nav}>
-                    <a href="/services">Services</a>
-                    <a href="#">Customers</a>
-                    <a href="#">Pricing</a>
-                    <a href="#">Learn</a>
+                    <a className={styles.navItem} href="/services">Services</a>
+                    <a className={styles.navItem} href="#">Customers</a>
+                    <a className={styles.navItem} href="#">Pricing</a>
+                    <a className={styles.navItem} href="#">Learn</a>
                 </div>
                 <div className={styles.creds}>
                     <button onClick={() => router.push("/login")} className={styles.btnPrimary}>Login</button>
@@ -27,8 +27,8 @@ export default function Home() {
             </div>
             <div className={styles.heroSection}>
                 <div className={styles.left}>
-                    <h5 className={styles.heroTitle}>Get paid early save automatically all your pay.</h5>
-                    <p className={styles.heroText}>Supports small businesses with simple invoicing, powerful intergrations, and cash flow management tools</p>
+                    <h5 className={styles.heroTitle}>Automate due diligence and confidently verify every business relationship</h5>
+                    <p className={styles.heroText}>Empower organizations through automated due diligence, comprehensive compliance intelligence, and streamlined verification workflows.</p>
                     <div className={styles.getStarted}>
                         <input type="text" placeholder="Your email address" />
                         <button className={styles.btnPrimary}>
@@ -42,7 +42,12 @@ export default function Home() {
                     </div>
                 </div>
                 <div className={styles.right}>
-                    Some Images here
+                    <div className={styles.creditCardForm}>
+                        {/* Login Area */}
+                        <div className={styles.creditCard}>
+                            {/* Card Visa Example */}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
