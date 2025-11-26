@@ -2,10 +2,11 @@
 
 import { useEffect, useState } from "react"
 import styles from "./page.module.css";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
 
-    const [message, setMessage] = useState("Loading");
+    const router = useRouter();
 
     return (
         <div className={styles.container}>
@@ -20,7 +21,7 @@ export default function Home() {
                     <a href="#">Learn</a>
                 </div>
                 <div className={styles.creds}>
-                    <button className={styles.btnPrimary}>Login</button>
+                    <button onClick={() => router.push("/login")} className={styles.btnPrimary}>Login</button>
                     <button className={styles.btnPlain}>Sign Up</button>
                 </div>
             </div>
