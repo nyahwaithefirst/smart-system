@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import styles from "./page.module.css";
 import { useRouter } from "next/navigation";
-import { Banknote, HomeIcon, X } from "lucide-react";
+import { ArrowLeftRight, Banknote, HomeIcon, Landmark, Smartphone, X } from "lucide-react";
 
 export default function Home() {
 
@@ -78,14 +78,22 @@ export default function Home() {
                         <h5>3K+</h5>
                         <p>Businesses already running on Smart Analysis</p>
                     </div>
-                    <div className={styles.statsCard}>
+                    <div style={{ justifyContent: "start", rowGap: "3rem" }} className={styles.statsCard}>
                         <p>Instant Withdraw your funds at any time</p>
-                        <div>
-                            <span></span>
+                        <div className={styles.bankAnomally}>
+                            <span className={styles.anoIcon}><Smartphone size={30} /></span>
+                            <span className={styles.anoIcon}><ArrowLeftRight style={{ transform: "scaleX(1)", display: "block" }} /></span>
+                            <span className={styles.anoIcon}><Landmark size={30} /></span>
                         </div>
                     </div>
                     <div className={styles.statsCard} style={{ flexBasis: "36rem" }}>
+                        <div className={styles.graphStates}>
+                            <h5>No assets volatillity</h5>
+                            <p>Generate returns on your casg reserves without making any investments</p>
+                        </div>
+                        <div className={styles.graphsStatesLineCard}>
 
+                        </div>
                     </div>
                 </div>
             </div>
