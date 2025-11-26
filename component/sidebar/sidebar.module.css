@@ -13,23 +13,13 @@
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
+  width: 13rerem;
+  height: 4.5rem;
 }
 
-.logoSmart,
-.logoAnalysi {
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.logoSmart {
-  color: #2563eb;
-}
-
-.logoAnalysi {
-  color: #1f2937;
+.logoIcon {
+  width: 100%;
+  height: 100%;
 }
 
 /* Navigation */

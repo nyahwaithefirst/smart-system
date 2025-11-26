@@ -9,8 +9,7 @@ const Sidebar = ({ menuStructure, toggleExpand,
         <div className={styles.sidebar}>
             <div className={styles.sidebarHeader}>
                 <div className={styles.logo}>
-                    <span className={styles.logoSmart}>Smart</span>
-                    <span className={styles.logoAnalysi}>Analysi</span>
+                    <img src={"/logo.png"} className={styles.logoIcon} />
                 </div>
             </div>
 
