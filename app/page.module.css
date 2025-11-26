@@ -40,6 +40,8 @@
   display: flex;
   padding: 6rem;
   width: 100%;
+  position: relative;
+  padding-bottom: 12rem;
 }
 
 .heroSection > .left {
@@ -56,7 +58,7 @@
 }
 
 .heroSection > .left > .heroText {
-  width: 27rem;
+  width: 30rem;
 }
 
 .heroSection > .right {
@@ -125,4 +127,28 @@
   top: -60px;
   background-color: white;
   border-radius: 0.8rem;
+}
+
+.experienceSection {
+  position: absolute;
+  background-color: whitesmoke;
+  left: 6rem;
+  right: 6rem;
+  bottom: -12.5rem;
+  height: 20rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.preferenceSection {
+  width: 100%;
+  background-color: whitesmoke;
+  padding-top: 20rem;
+}
+
+.preferenceSection > .preferenceHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

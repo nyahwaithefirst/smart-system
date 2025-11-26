@@ -27,7 +27,7 @@ export default function Home() {
             </div>
             <div className={styles.heroSection}>
                 <div className={styles.left}>
-                    <h5 className={styles.heroTitle}>Automate due diligence and confidently verify every business relationship</h5>
+                    <h5 className={styles.heroTitle}>Transform compliance processes with automated insights</h5>
                     <p className={styles.heroText}>Empower organizations through automated due diligence, comprehensive compliance intelligence, and streamlined verification workflows.</p>
                     <div className={styles.getStarted}>
                         <input type="text" placeholder="Your email address" />
@@ -48,6 +48,22 @@ export default function Home() {
                             {/* Card Visa Example */}
                         </div>
                     </div>
+                </div>
+                <div className={styles.experienceSection}>
+                    <div>FUTURE PAYMENT</div>
+                    <div>
+                        <div>Experience that grows with your scale</div>
+                        <div>Design a financial operating system that works for your business and streamlined cash flow managment</div>
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div className={styles.preferenceSection}>
+                <div className={styles.preferenceHeader}>
+                    <span>WHY US</span>
+                    <h5>Why they prefer Smart Analysis</h5>
                 </div>
             </div>
         </div>
