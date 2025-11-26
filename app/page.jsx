@@ -25,6 +25,26 @@ export default function Home() {
                     <button className={styles.btnPlain}>Sign Up</button>
                 </div>
             </div>
+            <div className={styles.heroSection}>
+                <div className={styles.left}>
+                    <h5 className={styles.heroTitle}>Get paid early save automatically all your pay.</h5>
+                    <p className={styles.heroText}>Supports small businesses with simple invoicing, powerful intergrations, and cash flow management tools</p>
+                    <div className={styles.getStarted}>
+                        <input type="text" placeholder="Your email address" />
+                        <button className={styles.btnPrimary}>
+                            <span>Get Started</span>
+                        </button>
+                    </div>
+                    <div className={styles.otherClientsWrapper}>
+                        <span className={styles.otherClients}>Klarna.</span>
+                        <span className={styles.otherClients}>coinbase.</span>
+                        <span className={styles.otherClients}>Instacart</span>
+                    </div>
+                </div>
+                <div className={styles.right}>
+                    Some Images here
+                </div>
+            </div>
         </div>
     )
 } 
