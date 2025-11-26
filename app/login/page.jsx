@@ -45,7 +45,7 @@ export default function Page() {
                 {/* Logo and Header */}
                 <div className={styles.header}>
                     <div className={styles.logoBox}>
-                        <img src={"/"} className={styles.logoIcon} />
+                        <img src={"/logo.png"} className={styles.logoIcon} />
                     </div>
                     <p className={styles.subtitle}>Sign in to your account</p>
                 </div>
@@ -127,13 +127,6 @@ export default function Page() {
                         >
                             {isLoading ? 'Signing in...' : 'Sign In'}
                         </button>
-                    </div>
-
-                    {/* Demo Credentials */}
-                    <div className={styles.demoBox}>
-                        <p className={styles.demoTitle}>Demo Credentials:</p>
-                        <p className={styles.demoText}>Email: demo@smartanalysi.com</p>
-                        <p className={styles.demoText}>Password: demo123</p>
                     </div>
 
                     {/* Divider */}

@@ -1,6 +1,5 @@
 .container {
   min-height: 100vh;
-  background: linear-gradient(to bottom right, #eff6ff, #ffffff, #eff6ff);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,18 +20,14 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 3.4rem;
-  height: 3.4rem;
-  background-color: #2563eb;
-  border-radius: 0.65rem;
+  width: 20rem;
+  height: 5.9rem;
   margin-bottom: 0.85rem;
-  box-shadow: 0 9px 13px -3px rgba(0, 0, 0, 0.1),
-    0 3.5px 5px -2px rgba(0, 0, 0, 0.05);
 }
 
 .logoIcon {
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 100%;
+  height: 100%;
   color: white;
 }
 
