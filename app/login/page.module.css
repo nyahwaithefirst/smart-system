@@ -4,86 +4,87 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 0.85rem;
 }
 
 .wrapper {
   width: 100%;
-  max-width: 28rem;
+  max-width: 26rem;
 }
 
 .header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.7rem;
 }
 
 .logoBox {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 4rem;
-  height: 4rem;
+  width: 3.4rem;
+  height: 3.4rem;
   background-color: #2563eb;
-  border-radius: 0.75rem;
-  margin-bottom: 1rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-radius: 0.65rem;
+  margin-bottom: 0.85rem;
+  box-shadow: 0 9px 13px -3px rgba(0, 0, 0, 0.1),
+    0 3.5px 5px -2px rgba(0, 0, 0, 0.05);
 }
 
 .logoIcon {
-  width: 2rem;
-  height: 2rem;
+  width: 1.7rem;
+  height: 1.7rem;
   color: white;
 }
 
 .title {
-  font-size: 1.875rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: #111827;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .subtitle {
+  font-size: 0.875rem;
   color: #4b5563;
 }
 
 .card {
   background-color: white;
-  border-radius: 1rem;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  padding: 2rem;
+  border-radius: 0.85rem;
+  box-shadow: 0 17px 21px -4px rgba(0, 0, 0, 0.1),
+    0 8.5px 8.5px -4px rgba(0, 0, 0, 0.04);
+  padding: 1.7rem;
   border: 1px solid #f3f4f6;
 }
 
 .errorBox {
-  margin-bottom: 1.5rem;
-  padding: 1rem;
+  margin-bottom: 1.3rem;
+  padding: 0.85rem;
   background-color: #fef2f2;
   border: 1px solid #fecaca;
   border-radius: 0.5rem;
   display: flex;
   align-items: flex-start;
-  gap: 0.75rem;
+  gap: 0.65rem;
 }
 
 .errorIcon {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.1rem;
+  height: 1.1rem;
   color: #dc2626;
   flex-shrink: 0;
-  margin-top: 0.125rem;
+  margin-top: 0.1rem;
 }
 
 .errorText {
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   color: #991b1b;
 }
 
 .formContainer {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.3rem;
 }
 
 .fieldGroup {
@@ -93,19 +94,20 @@
 
 .label {
   display: block;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   font-weight: 500;
   color: #374151;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .input {
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 0.65rem 0.85rem;
   border: 1px solid #d1d5db;
-  border-radius: 0.5rem;
+  border-radius: 0.45rem;
   transition: all 0.2s;
   outline: none;
+  font-size: 0.875rem;
 }
 
 .input:focus {
@@ -120,12 +122,13 @@
 
 .passwordInput {
   width: 100%;
-  padding: 0.75rem 1rem;
-  padding-right: 3rem;
+  padding: 0.65rem 0.85rem;
+  padding-right: 2.5rem;
   border: 1px solid #d1d5db;
-  border-radius: 0.5rem;
+  border-radius: 0.45rem;
   transition: all 0.2s;
   outline: none;
+  font-size: 0.875rem;
 }
 
 .passwordInput:focus {
@@ -136,7 +139,7 @@
 
 .eyeButton {
   position: absolute;
-  right: 0.75rem;
+  right: 0.65rem;
   top: 50%;
   transform: translateY(-50%);
   color: #6b7280;
@@ -151,8 +154,8 @@
 }
 
 .eyeIcon {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.1rem;
+  height: 1.1rem;
 }
 
 .optionsRow {
@@ -164,13 +167,13 @@
 .checkboxLabel {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
   cursor: pointer;
 }
 
 .checkbox {
-  width: 1rem;
-  height: 1rem;
+  width: 0.9rem;
+  height: 0.9rem;
   color: #2563eb;
   border: 1px solid #d1d5db;
   border-radius: 0.25rem;
@@ -183,12 +186,12 @@
 }
 
 .checkboxText {
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   color: #374151;
 }
 
 .forgotLink {
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   color: #2563eb;
   font-weight: 500;
   text-decoration: none;
@@ -203,9 +206,10 @@
   width: 100%;
   background-color: #2563eb;
   color: white;
-  padding: 0.75rem;
-  border-radius: 0.5rem;
+  padding: 0.65rem;
+  border-radius: 0.45rem;
   font-weight: 500;
+  font-size: 0.9rem;
   border: none;
   cursor: pointer;
   transition: all 0.2s;
@@ -226,28 +230,28 @@
 }
 
 .demoBox {
-  margin-top: 1.5rem;
-  padding: 1rem;
+  margin-top: 1.3rem;
+  padding: 0.85rem;
   background-color: #eff6ff;
   border-radius: 0.5rem;
   border: 1px solid #dbeafe;
 }
 
 .demoTitle {
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   color: #1e40af;
   font-weight: 500;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .demoText {
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   color: #1e3a8a;
 }
 
 .divider {
   position: relative;
-  margin: 1.5rem 0;
+  margin: 1.3rem 0;
 }
 
 .dividerLine {
@@ -267,8 +271,8 @@
   position: relative;
   display: flex;
   justify-content: center;
-  font-size: 0.875rem;
-  padding: 0 1rem;
+  font-size: 0.8rem;
+  padding: 0 0.85rem;
   background-color: white;
   color: #6b7280;
 }
@@ -276,17 +280,17 @@
 .socialButtons {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0.75rem;
+  gap: 0.65rem;
 }
 
 .socialButton {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1rem;
+  gap: 0.4rem;
+  padding: 0.65rem 0.85rem;
   border: 1px solid #d1d5db;
-  border-radius: 0.5rem;
+  border-radius: 0.45rem;
   background: white;
   cursor: pointer;
   transition: background-color 0.2s;
@@ -297,20 +301,20 @@
 }
 
 .socialIcon {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.1rem;
+  height: 1.1rem;
 }
 
 .socialText {
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   font-weight: 500;
   color: #374151;
 }
 
 .signupText {
   text-align: center;
-  margin-top: 1.5rem;
-  font-size: 0.875rem;
+  margin-top: 1.3rem;
+  font-size: 0.8rem;
   color: #4b5563;
 }
 
@@ -319,6 +323,7 @@
   font-weight: 500;
   text-decoration: none;
   transition: color 0.2s;
+  font-size: 0.8rem;
 }
 
 .signupLink:hover {

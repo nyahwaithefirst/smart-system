@@ -4,10 +4,12 @@ import { useState } from 'react';
 import { Eye, EyeOff, Search, AlertCircle } from 'lucide-react';
 import styles from "./page.module.css";
 import { useRouter } from 'next/navigation';
+import { serviceBaseUrl } from '../../constant/baseUrl';
+import { postApi } from '../../apis';
 
 export default function Page() {
     const [showPassword, setShowPassword] = useState(false);
-    const [email, setEmail] = useState('');
+    const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [rememberMe, setRememberMe] = useState(false);
     const [error, setError] = useState('');
@@ -15,21 +17,26 @@ export default function Page() {
 
     const router = useRouter();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
         setIsLoading(true);
 
-        // Simulate API call
-        setTimeout(() => {
-            if (email === 'demo@smartanalysi.com' && password === 'demo123') {
-                alert('Login successful! Redirecting to dashboard...');
-                router.push("/services");
-            } else {
-                setError('Invalid email or password');
+        try {
+            const url = `${serviceBaseUrl}users/login`;
+            const objForm = {
+                username: username,
+                password: password,
             }
-            setIsLoading(false);
-        }, 1000);
+            const results = await postApi(url, objForm);
+
+            //save token somewhere
+            router.push("/services");
+        } catch (error) {
+            setError("Invalid email or password")
+        }
+
+        setIsLoading(false);
     };
 
     return (
@@ -38,9 +45,8 @@ export default function Page() {
                 {/* Logo and Header */}
                 <div className={styles.header}>
                     <div className={styles.logoBox}>
-                        <Search className={styles.logoIcon} />
+                        <img src={"/"} className={styles.logoIcon} />
                     </div>
-                    <h1 className={styles.title}>Smart Analysi</h1>
                     <p className={styles.subtitle}>Sign in to your account</p>
                 </div>
 
@@ -56,16 +62,16 @@ export default function Page() {
                     <div className={styles.formContainer}>
                         {/* Email Field */}
                         <div className={styles.fieldGroup}>
-                            <label htmlFor="email" className={styles.label}>
-                                Email Address
+                            <label htmlFor="username" className={styles.label}>
+                                Username
                             </label>
                             <input
-                                id="email"
-                                type="email"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
+                                id="username"
+                                type="text"
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)}
                                 className={styles.input}
-                                placeholder="you@example.com"
+                                placeholder="Username"
                             />
                         </div>
 
