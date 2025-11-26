@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import styles from "./page.module.css";
 import { useRouter } from "next/navigation";
+import { Banknote, HomeIcon, X } from "lucide-react";
 
 export default function Home() {
 
@@ -50,13 +51,19 @@ export default function Home() {
                     </div>
                 </div>
                 <div className={styles.experienceSection}>
-                    <div>FUTURE PAYMENT</div>
-                    <div>
-                        <div>Experience that grows with your scale</div>
+                    <div className={styles.experienceSectionSubHeader}>FUTURE PAYMENT</div>
+                    <div className={styles.flex}>
+                        <div className={styles.header}>Experience that grows with your scale</div>
                         <div>Design a financial operating system that works for your business and streamlined cash flow managment</div>
                     </div>
-                    <div>
-                        
+                    <div className={styles.flex}>
+                        {[1, 2, 3].map((item) => (
+                            <div style={{ display: "flex", flexDirection: "column", rowGap: "0.5rem" }}>
+                                <HomeIcon size={35} style={{ marginBottom: "0.2rem" }} />
+                                <h5>Free transfers</h5>
+                                <p>create a financial experienceay and automate repeat purchases by scheduling recurring payments</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
@@ -64,6 +71,37 @@ export default function Home() {
                 <div className={styles.preferenceHeader}>
                     <span>WHY US</span>
                     <h5>Why they prefer Smart Analysis</h5>
+                </div>
+                {/* Add this below preferenceHeader in your Home component */}
+                <div className={styles.statsSection}>
+                    <div className={styles.statsCard}>
+                        <h5>3K+</h5>
+                        <p>Businesses already running on Smart Analysis</p>
+                    </div>
+                    <div className={styles.statsCard}>
+                        <p>Instant Withdraw your funds at any time</p>
+                        <div>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div className={styles.statsCard} style={{ flexBasis: "36rem" }}>
+
+                    </div>
+                </div>
+            </div>
+            <div className={styles.confidenceSection}>
+                <div className={styles.confidenceSectionSubHeader}>FUTURE PAYMENT</div>
+                <div className={styles.confidenceHeader}>
+                    <div className={styles.confidenceTitle}>Maximize your returns with a Reserve account that generates</div>
+                </div>
+                <div className={styles.stepsWrap}>
+                    {[1, 2, 3].map((item) => (
+                        <div className={styles.steps}>
+                            <h3>{item}</h3>
+                            <h5>Open your account</h5>
+                            <p>create a financial experienceay and automate repeat purchases by scheduling</p>
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>

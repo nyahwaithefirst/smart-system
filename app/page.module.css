@@ -1,6 +1,9 @@
 .container {
   height: 100vh;
   width: 100%;
+  font-family: "Inter", sans-serif; /* modern font */
+  color: #1f2937; /* softer black for readability */
+  background-color: #f9fafb; /* subtle page background */
 }
 
 .container > .navBar {
@@ -10,11 +13,22 @@
   justify-content: space-between;
   padding: 0 6rem;
   height: 100px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* subtle shadow */
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .container > .navBar > .navBrand {
   width: 18rem;
-  height: 4rem;
+  height: 5rem;
+}
+
+.container > .navBar > .navBrand > .logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* ensure logo stays sharp */
 }
 
 .container > .navBar > .nav {
@@ -23,17 +37,18 @@
 }
 
 .container > .navBar > .nav > .navItem {
-  color: black;
+  color: #1f2937;
+  font-weight: 500;
+  transition: color 0.2s;
 }
 
-.container > .navBar > .navBrand > .logo {
-  width: 100%;
-  height: 100%;
+.container > .navBar > .nav > .navItem:hover {
+  color: #2563eb; /* hover effect */
 }
 
 .creds {
   display: flex;
-  column-gap: 0.6rem;
+  column-gap: 0.8rem;
 }
 
 .heroSection {
@@ -41,45 +56,51 @@
   padding: 6rem;
   width: 100%;
   position: relative;
-  padding-bottom: 12rem;
+  padding-bottom: 15rem;
+  gap: 2rem;
 }
 
 .heroSection > .left {
-  padding: 1rem;
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: start;
-  row-gap: 10px;
+  align-items: flex-start;
+  row-gap: 1rem;
 }
 
 .heroSection > .left > .heroTitle {
-  font-size: 50.5px;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .heroSection > .left > .heroText {
-  width: 30rem;
-}
-
-.heroSection > .right {
-  flex: 1;
-  display: flex;
-  justify-content: start;
-  padding: 5rem 0rem;
+  width: 28rem;
+  font-size: 1.1rem;
+  color: #4b5563;
 }
 
 .getStarted {
-  border: 1px solid #1c4cb3;
+  display: flex;
+  border: 2px solid #2563eb;
   border-radius: 0.5rem;
+  overflow: hidden;
+  margin-top: 1rem;
 }
 
 .getStarted > input {
-  padding: 0 1rem;
+  padding: 0.6rem 1rem;
   border: none;
+  flex: 1;
 }
 
 .getStarted > input:focus {
   outline: none;
+}
+
+.getStarted > button {
+  padding: 0 1.5rem;
+  font-weight: 600;
 }
 
 .otherClientsWrapper {
@@ -89,61 +110,96 @@
 }
 
 .otherClients {
-  font-weight: bolder;
+  font-weight: 700;
+  color: #6b7280;
 }
 
 .btnPrimary {
-  border: 1px solid #1c4cb3;
+  border: none;
   background-color: #2563eb;
   color: white;
-  padding: 0.3rem 1.5rem;
+  padding: 0.5rem 1.8rem;
   border-radius: 0.5rem;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btnPrimary:hover {
+  background-color: #1d4ed8;
 }
 
 .btnPlain {
-  border: 1px solid #1c4cb3;
+  border: 2px solid #2563eb;
   background-color: white;
-  padding: 0.3rem 1.5rem;
+  padding: 0.5rem 1.8rem;
   border-radius: 0.5rem;
+  font-weight: 600;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btnPlain:hover {
+  background-color: #2563eb;
+  color: white;
 }
 
 .creditCardForm {
   width: 18rem;
   height: 18rem;
-  border: 1px solid lightgray;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   position: relative;
-  border-radius: 0.8rem;
+  background-color: white;
   margin-left: 5rem;
 }
 
 .creditCard {
   width: 12rem;
   height: 14rem;
-  border: 1px solid lightgray;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   position: absolute;
   left: 60%;
   top: -60px;
-  background-color: white;
-  border-radius: 0.8rem;
+  background-color: #f3f4f6;
 }
 
 .experienceSection {
   position: absolute;
-  background-color: whitesmoke;
+  background-color: white;
   left: 6rem;
   right: 6rem;
-  bottom: -12.5rem;
-  height: 20rem;
+  bottom: -20.5rem;
   border-radius: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.experienceSectionSubHeader {
+  color: #2563eb;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.experienceSection > .flex {
+  display: flex;
+  width: 100%;
+  column-gap: 8rem;
+}
+
+.experienceSection > .flex > .header {
+  font-size: 2.4rem;
+  font-weight: 700;
 }
 
 .preferenceSection {
   width: 100%;
-  background-color: whitesmoke;
-  padding-top: 20rem;
+  background-color: #f3f4f6;
+  padding-top: 30rem;
+  padding-bottom: 5rem;
 }
 
 .preferenceSection > .preferenceHeader {
@@ -151,4 +207,125 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  row-gap: 0.5rem;
+}
+
+.preferenceSection > .preferenceHeader > span {
+  color: #2563eb;
+}
+
+.preferenceSection > .preferenceHeader > h5 {
+  font-size: 40px;
+}
+
+/* CSS additions for stats section */
+.statsSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1rem;
+  width: 100%;
+  justify-content: center;
+  padding: 0 8rem;
+}
+
+.statsCard {
+  background-color: #2564eb1c;
+  border-radius: 1rem;
+  padding: 2rem;
+  flex: 1 1 18rem; /* responsive sizing */
+  min-width: 18rem;
+  height: 20rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.statsCard > h5 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+  font-size: 150px;
+}
+
+.statsCard > p {
+  font-size: 18px !important;
+  font-weight: bold;
+  width: 16rem;
+}
+
+.statsCard p {
+  color: #4b5563;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.statsCardGraph {
+  margin-top: 1rem;
+  width: 100%;
+  height: 6rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(90deg, #2563eb 0%, #60a5fa 100%);
+}
+
+.confidenceSection {
+  bottom: -20.5rem;
+  padding: 5rem 6rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #1f2937;
+  color: white;
+}
+
+.confidenceSectionSubHeader {
+  color: #2563eb;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.confidenceHeader > .confidenceTitle {
+  font-size: 48px;
+  width: 45rem;
+}
+
+.confidenceSection > .stepsWrap {
+  margin-top: 1.5rem;
+  display: flex;
+  width: 100%;
+  column-gap: 1.4rem;
+}
+
+.confidenceSection > .stepsWrap > .steps {
+  padding: 1rem 1.3rem;
+  background: linear-gradient(
+    to bottom,
+    #37475f,
+    #2f3a4a
+  ); /* top to bottom gradient */
+  border-radius: 0.5rem;
+}
+
+.confidenceSection > .stepsWrap > .steps > h3 {
+  font-size: 60px;
+  font-weight: bolder;
+  background: linear-gradient(
+    to bottom,
+    white,
+    #37475f
+  ); /* vertical gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent; /* for Firefox */
+}
+
+.confidenceSection > .stepsWrap > .steps > h5 {
+  color: white;
+}
+
+.confidenceSection > .stepsWrap > .steps > p {
+  color: rgb(197, 195, 195);
 }
