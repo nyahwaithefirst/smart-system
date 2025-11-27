@@ -3,11 +3,54 @@
 import { useEffect, useState } from "react"
 import styles from "./page.module.css";
 import { useRouter } from "next/navigation";
-import { ArrowLeftRight, Banknote, ChevronDown, HomeIcon, Landmark, Smartphone, X } from "lucide-react";
+import { ArrowLeftRight, Banknote, ChevronDown, CreditCard, HomeIcon, Landmark, Shield, Smartphone, X } from "lucide-react";
+import LineWithAreaChart from "../component/charts/line-chart/lineChart";
 
 export default function Home() {
 
     const router = useRouter();
+
+    const experinceList = [
+        {
+            id: 1,
+            icon: CreditCard,
+            title: "Free transferes",
+            description: "Create a financial experienceay and automate repeat purchase by sheduling recurring payments"
+        },
+        {
+            id: 2,
+            icon: Landmark,
+            title: "Multiple account",
+            description: "Run your operations with cash from your account and generate yield on funds stored in your account"
+        },
+        {
+            id: 3,
+            icon: Shield,
+            title: "Unmatched security",
+            description: "Security manage your finances with organisation wide MFA, card-locking and account-level-controls"
+        },
+    ]
+
+    const data = [
+        { name: 'Jan', value: 400 },
+        { name: 'Feb', value: 300 },
+        { name: 'Mar', value: 500 },
+        { name: 'Apr', value: 450 },
+        { name: 'May', value: 600 },
+        { name: 'Jun', value: 700 },
+        { name: 'Jul', value: 650 },
+        { name: 'Aug', value: 700 },
+        { name: 'Sep', value: 750 },
+        { name: 'Oct', value: 700 },
+        { name: 'Nov', value: 850 },
+        { name: 'Dec', value: 1000 },
+    ]
+
+    const companies = [
+        { count: "24%", description: "Revenue business" },
+        { count: "180K", description: "In annual revenue" },
+        { count: "10+", description: "Months of runaway" }
+    ]
 
     return (
         <div className={styles.container}>
@@ -57,10 +100,11 @@ export default function Home() {
                         <div>Design a financial operating system that works for your business and streamlined cash flow managment</div>
                     </div>
                     <div className={styles.flex}>
-                        {[1, 2, 3].map((item) => (
-                            <div style={{ display: "flex", flexDirection: "column", rowGap: "0.5rem" }}>
-                                <HomeIcon size={35} style={{ marginBottom: "0.2rem" }} />
-                                <h5>Free transfers</h5>
+                        {experinceList.map((exp) => (
+                            <div key={exp.id} style={{ display: "flex", flexDirection: "column", rowGap: "0.5rem" }}>
+                                {/* <HomeIcon size={35} style={{ marginBottom: "0.2rem" }} /> */}
+                                {<exp.icon size={35} style={{ marginBottom: "0.2rem" }} />}
+                                <h5>{exp.title}</h5>
                                 <p>create a financial experienceay and automate repeat purchases by scheduling recurring payments</p>
                             </div>
                         ))}
@@ -96,7 +140,6 @@ export default function Home() {
                                 <div className={styles.lineStats}>
                                     <div>Summary</div>
                                     <div>$1,876,580</div>
-
                                 </div>
                                 <div>
                                     <div>
@@ -105,6 +148,7 @@ export default function Home() {
                                     </div>
                                 </div>
                             </div>
+                            <LineWithAreaChart data={data} />
                         </div>
                     </div>
                 </div>
@@ -122,6 +166,41 @@ export default function Home() {
                             <p>create a financial experienceay and automate repeat purchases by scheduling</p>
                         </div>
                     ))}
+                </div>
+            </div>
+            <div className={styles.missionSection}>
+                <div className={styles.missionHeader}>
+                    <p className={styles.missionSubtitle}>OUR MISSION</p>
+                    <h5 className={styles.missionTitle}>We've helped Innovative companies</h5>
+                    <p className={styles.missionParagraph}>Hundreds of all sizes and accross industries have made a big improvements with us.</p>
+                </div>
+                <div className={styles.comStatesWrapper}>
+                    {companies.map((item) => (
+                        <div className={styles.comStates}>
+                            <div>{item.count}</div>
+                            <div>{item.description}</div>
+                        </div>
+                    ))}
+                </div>
+                <div className={styles.planWrapper}>
+                    <h5 className={styles.planHeader}>CHOOSE PLAN:</h5>
+                    <div className={styles.planItemGroup}>
+                        <div className={styles.planItem}>
+                            <div className={styles.planItemWrapper}>
+                                <div style={{ color: "#2563eb" }}>Plus</div>
+                                <div style={{ color: "#2563eb" }}>$2.99/month</div>
+                            </div>
+                        </div>
+                        <div className={styles.planItem}>
+                            <div style={{ backgroundColor: "#2564eb41" }} className={styles.planItemWrapper}>
+                                <div>Premium</div>
+                                <div>
+                                    <span>$2.99/month</span>
+                                    <span>$2.99/month</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
