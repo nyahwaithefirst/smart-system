@@ -6,7 +6,8 @@ import axios from "axios";
 // Change these to your credentials
 // ===============================
 const USERNAME = "lodza";
-const PASSWORD = "@Password123";
+// const PASSWORD = "@Password123";
+const PASSWORD = "55555";
 
 // Encode credentials as Base64
 const basicAuthToken = `Basic ${btoa(`${USERNAME}:${PASSWORD}`)}`;
