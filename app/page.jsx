@@ -107,7 +107,7 @@ export default function Home() {
                         </div>
                         <div className={styles.creditCardInput}>
                             <Landmark />
-                            <span>Credit Card</span>
+                            <span>Bank Account</span>
                             <input type="radio" />
                         </div>
                         <button className={styles.btnSecondary}>Pay</button>
