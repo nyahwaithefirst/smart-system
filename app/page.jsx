@@ -1,9 +1,8 @@
 "use client"
 
-import { useEffect, useState } from "react"
 import styles from "./page.module.css";
 import { useRouter } from "next/navigation";
-import { ArrowLeftRight, Banknote, ChevronDown, CreditCard, HomeIcon, Landmark, Shield, Smartphone, X } from "lucide-react";
+import { ArrowLeft, ArrowLeftRight, ArrowRight, Banknote, ChevronDown, CreditCard, HomeIcon, Landmark, Shield, Smartphone, X } from "lucide-react";
 import LineWithAreaChart from "../component/charts/line-chart/lineChart";
 
 export default function Home() {
@@ -201,6 +200,71 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div className={styles.contactUsSection}>
+                <div className={styles.contactUsWrapper}>
+                    <div className={styles.contactUsSubTitle}>TRY IT NOW</div>
+                    <div className={styles.contactUsFlex}>
+                        <div className={styles.contactUsRowItem}>
+                            <div className={styles.contactUsHeader}>Ready to level up your payment process?</div>
+                            <p className={styles.contactUsDescr}>
+                                Supports small business with simple invoicong powerful integrations and cash flow managment tools
+                            </p>
+                        </div>
+                        <div className={styles.contactUsFlexItem}>
+                            <button className={styles.btnPrimary}>Get Started Now</button>
+                            <button className={styles.btnOutlined}>
+                                <span>Learn More</span>
+                                <ArrowRight style={{ transform: "rotate(310deg)" }} />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className={styles.footer}>
+                <div className={styles.footerContent}>
+                    <div className={styles.footerBrand}>
+                        <img src="/logo.png" alt="logo" />
+                        <p>Smart Analysis — powering the future of compliance intelligence.</p>
+                    </div>
+
+                    <div className={styles.footerLinksGroup}>
+                        <div className={styles.footerCol}>
+                            <h4>Company</h4>
+                            <a>About</a>
+                            <a>Careers</a>
+                            <a>Press</a>
+                            <a>News</a>
+                        </div>
+
+                        <div className={styles.footerCol}>
+                            <h4>Product</h4>
+                            <a>Features</a>
+                            <a>Pricing</a>
+                            <a>Integrations</a>
+                            <a>API</a>
+                        </div>
+
+                        <div className={styles.footerCol}>
+                            <h4>Resources</h4>
+                            <a>Blog</a>
+                            <a>Guides</a>
+                            <a>Help Center</a>
+                            <a>Community</a>
+                        </div>
+
+                        <div className={styles.footerCol}>
+                            <h4>Legal</h4>
+                            <a>Privacy Policy</a>
+                            <a>Terms of Service</a>
+                            <a>Security</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className={styles.footerBottom}>
+                    <span>© 2025 Smart Analysis. All rights reserved.</span>
                 </div>
             </div>
         </div>
