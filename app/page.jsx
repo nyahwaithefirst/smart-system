@@ -2,7 +2,7 @@
 
 import styles from "./page.module.css";
 import { useRouter } from "next/navigation";
-import { ArrowLeft, ArrowLeftRight, ArrowRight, Banknote, ChevronDown, CreditCard, HomeIcon, Landmark, Shield, Smartphone, X } from "lucide-react";
+import { ArrowLeft, ArrowLeftRight, ArrowRight, Atom, Banknote, ChevronDown, CreditCard, HomeIcon, Landmark, Nfc, Shield, Smartphone, X } from "lucide-react";
 import LineWithAreaChart from "../component/charts/line-chart/lineChart";
 
 export default function Home() {
@@ -86,9 +86,40 @@ export default function Home() {
                 </div>
                 <div className={styles.right}>
                     <div className={styles.creditCardForm}>
-                        {/* Login Area */}
+                        <div className={styles.creditCardHeader}>
+                            <div className={styles.creditCardIcon}>
+                                <Atom />
+                            </div>
+                            <div className={styles.creditHeaderBody}>
+                                <div>Dipa Inhouse</div>
+                                <div>nyahwailloyd10@gmail.com</div>
+                            </div>
+                        </div>
+                        <div className={styles.creditCardInvoice}>
+                            <div>Invoice</div>
+                            <div>$1,876,580</div>
+                            <div>April 21, 2024</div>
+                        </div>
+                        <div className={styles.creditCardInput}>
+                            <CreditCard />
+                            <span>Credit Card</span>
+                            <input type="radio" />
+                        </div>
+                        <div className={styles.creditCardInput}>
+                            <Landmark />
+                            <span>Credit Card</span>
+                            <input type="radio" />
+                        </div>
+                        <button className={styles.btnSecondary}>Pay</button>
                         <div className={styles.creditCard}>
-                            {/* Card Visa Example */}
+                            <div className={styles.creditCardVisaMain}>
+                                <div>Credit Card</div>
+                                <div>234 **** ****</div>
+                            </div>
+                            <div className={styles.creditCardVisaFooter}>
+                                <div>VISA</div>
+                                <Nfc />
+                            </div>
                         </div>
                     </div>
                 </div>

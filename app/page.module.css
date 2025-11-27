@@ -124,6 +124,16 @@
   transition: background 0.3s;
 }
 
+.btnSecondary {
+  border: none;
+  background-color: #1f2937;
+  color: white;
+  padding: 0.5rem 1.8rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
 .btnOutlined {
   border: 1px solid #1d4ed8;
   background-color: transparent;
@@ -154,25 +164,47 @@
   color: white;
 }
 
-.creditCardForm {
-  width: 18rem;
-  height: 18rem;
-  border-radius: 1rem;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  position: relative;
-  background-color: white;
-  margin-left: 5rem;
-}
-
 .creditCard {
   width: 12rem;
-  height: 14rem;
-  border-radius: 1rem;
+  height: 17rem;
+  border-radius: 1.5rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   position: absolute;
   left: 60%;
-  top: -60px;
-  background-color: #f3f4f6;
+  top: -50px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: white;
+}
+
+.creditCardVisaMain {
+  background-color: #1d4ed8;
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.creditCardVisaMain > div:nth-child(1) {
+  font-size: 12px;
+}
+
+.creditCardVisaMain > div:nth-child(2) {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.creditCardVisaFooter {
+  height: 4.5rem;
+  background-color: #111827;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.creditCardVisaFooter > div:nth-child(1) {
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .experienceSection {
@@ -626,4 +658,78 @@
   text-align: center;
   color: #6b7280;
   font-size: 0.9rem;
+}
+
+.creditCardForm {
+  width: 23rem;
+  height: fit-content;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  background-color: white;
+  margin-left: 5rem;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.creditCardHeader {
+  display: flex;
+  align-items: center;
+  column-gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.creditCardIcon {
+  background-color: #1d4ed8;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+.creditHeaderBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.creditHeaderBody > div:nth-child(1) {
+  font-size: 13px;
+  font-weight: bold;
+}
+.creditHeaderBody > div:nth-child(2) {
+  font-size: 11px;
+}
+
+.creditCardInvoice {
+  border: 1px solid lightgray;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.creditCardInvoice > div:nth-child(2) {
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.creditCardInput {
+  border: 1px solid #1d4ed8;
+  padding: 0.6rem;
+  border-radius: 0.8rem;
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.creditCardInput > span {
+  flex: 1;
+}
+
+.creditCardInput > .input {
+  float: right;
 }
