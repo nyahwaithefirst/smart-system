@@ -125,7 +125,7 @@ export default function Home() {
                 </div>
                 <div className={styles.experienceSection}>
                     <div className={styles.experienceSectionSubHeader}>FUTURE PAYMENT</div>
-                    <div className={styles.flex}>
+                    <div style={{ marginBottom: "2.2rem" }} className={styles.flex}>
                         <div className={styles.header}>Experience that grows with your scale</div>
                         <div>Design a financial operating system that works for your business and streamlined cash flow managment</div>
                     </div>
@@ -133,7 +133,7 @@ export default function Home() {
                         {experinceList.map((exp) => (
                             <div key={exp.id} style={{ display: "flex", flexDirection: "column", rowGap: "0.5rem" }}>
                                 {/* <HomeIcon size={35} style={{ marginBottom: "0.2rem" }} /> */}
-                                {<exp.icon size={35} style={{ marginBottom: "0.2rem" }} />}
+                                {<exp.icon color="#1d4ed8" size={35} style={{ marginBottom: "0.2rem" }} />}
                                 <h5>{exp.title}</h5>
                                 <p>create a financial experienceay and automate repeat purchases by scheduling recurring payments</p>
                             </div>
