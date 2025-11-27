@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import styles from "./page.module.css";
 import { useRouter } from "next/navigation";
-import { ArrowLeftRight, Banknote, HomeIcon, Landmark, Smartphone, X } from "lucide-react";
+import { ArrowLeftRight, Banknote, ChevronDown, HomeIcon, Landmark, Smartphone, X } from "lucide-react";
 
 export default function Home() {
 
@@ -92,7 +92,19 @@ export default function Home() {
                             <p>Generate returns on your casg reserves without making any investments</p>
                         </div>
                         <div className={styles.graphsStatesLineCard}>
+                            <div className={styles.lineChartWrapper}>
+                                <div className={styles.lineStats}>
+                                    <div>Summary</div>
+                                    <div>$1,876,580</div>
 
+                                </div>
+                                <div>
+                                    <div>
+                                        <span>6 Months</span>
+                                        <ChevronDown />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

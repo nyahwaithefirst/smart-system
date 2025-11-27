@@ -174,7 +174,7 @@
   padding: 5rem 3rem;
   display: flex;
   flex-direction: column;
-  row-gap: 2rem;
+  /* row-gap: 2rem; */
 }
 
 .experienceSectionSubHeader {
@@ -303,22 +303,6 @@
   width: 15rem;
 }
 
-.graphsStatesLineCard {
-  background-color: white;
-  width: 60%;
-  height: 18.1rem;
-  position: absolute;
-  right: 4rem;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  .your-element {
-    /* x-offset | y-offset | blur | spread | color */
-    box-shadow: -3px -3px 6px rgba(0, 0, 0, 0.342),
-      /* left */ 3px -3px 6px rgba(0, 0, 0, 0.349),
-      /* right */ 0px -3px 6px rgba(0, 0, 0, 0.432); /* top */
-  }
-}
-
 .confidenceSection {
   bottom: -20.5rem;
   padding: 5rem 6rem;
@@ -377,4 +361,32 @@
 
 .confidenceSection > .stepsWrap > .steps > p {
   color: rgb(197, 195, 195);
+}
+
+.graphsStatesLineCard {
+  background-color: white;
+  width: 60%;
+  height: 18.1rem;
+  position: absolute;
+  right: 4rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  padding: 2rem;
+  .your-element {
+    /* x-offset | y-offset | blur | spread | color */
+    box-shadow: -3px -3px 6px rgba(0, 0, 0, 0.342),
+      /* left */ 3px -3px 6px rgba(0, 0, 0, 0.349),
+      /* right */ 0px -3px 6px rgba(0, 0, 0, 0.432); /* top */
+  }
+}
+
+.lineChartWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lineStats > div:nth-child(2) {
+  font-size: 27px;
+  font-weight: bolder;
 }
