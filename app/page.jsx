@@ -2,7 +2,7 @@
 
 import styles from "./page.module.css";
 import { useRouter } from "next/navigation";
-import { ArrowLeft, ArrowLeftRight, ArrowRight, Atom, Banknote, ChevronDown, CreditCard, HomeIcon, Landmark, Nfc, Shield, Smartphone, X } from "lucide-react";
+import { AlertTriangle, ArrowLeft, ArrowLeftRight, ArrowRight, Atom, BadgeCheck, Banknote, ChevronDown, CreditCard, FileSearch, HomeIcon, Landmark, Nfc, SearchCheck, Shield, ShieldCheck, Smartphone, X } from "lucide-react";
 import LineWithAreaChart from "../component/charts/line-chart/lineChart";
 
 export default function Home() {
@@ -12,23 +12,23 @@ export default function Home() {
     const experinceList = [
         {
             id: 1,
-            icon: CreditCard,
-            title: "Free transferes",
-            description: "Create a financial experienceay and automate repeat purchase by sheduling recurring payments"
+            icon: SearchCheck,
+            title: "Automated KYC Checks",
+            description: "Run identity verification, sanctions screening, and AML checks automatically for every new onboarding."
         },
         {
             id: 2,
-            icon: Landmark,
-            title: "Multiple account",
-            description: "Run your operations with cash from your account and generate yield on funds stored in your account"
+            icon: FileSearch,
+            title: "Document Verification",
+            description: "Upload, validate, and audit compliance documents with automated extraction and verification workflows."
         },
         {
             id: 3,
-            icon: Shield,
-            title: "Unmatched security",
-            description: "Security manage your finances with organisation wide MFA, card-locking and account-level-controls"
+            icon: ShieldCheck,
+            title: "Risk Monitoring",
+            description: "Monitor ongoing financial, operational, and regulatory risks with real-time alerts and scoring."
         },
-    ]
+    ];
 
     const data = [
         { name: 'Jan', value: 400 },
@@ -50,6 +50,27 @@ export default function Home() {
         { count: "180K", description: "In annual revenue" },
         { count: "10+", description: "Months of runaway" }
     ]
+
+    const dueDiligenceStages = [
+        {
+            step: 1,
+            title: "Collect and Upload Documents",
+            description:
+                "Provide essential company documents to initiate automated identity, compliance, and risk evaluations."
+        },
+        {
+            step: 2,
+            title: "Automated Compliance Checks",
+            description:
+                "Our system scans for sanctions, validates identities, and evaluates regulatory compliance in real time."
+        },
+        {
+            step: 3,
+            title: "Risk Review & Final Assessment",
+            description:
+                "Receive a consolidated risk profile and detailed insights to support confident, audit-ready decisions."
+        }
+    ];
 
     return (
         <div className={styles.container}>
@@ -103,12 +124,12 @@ export default function Home() {
                         <div className={styles.creditCardInput}>
                             <CreditCard />
                             <span>Credit Card</span>
-                            <input type="radio" />
+                            <input name="transferType" type="radio" checked />
                         </div>
                         <div className={styles.creditCardInput}>
                             <Landmark />
                             <span>Bank Account</span>
-                            <input type="radio" />
+                            <input name="transferType" type="radio" />
                         </div>
                         <button className={styles.btnSecondary}>Pay</button>
                         <div className={styles.creditCard}>
@@ -127,7 +148,7 @@ export default function Home() {
                     <div className={styles.experienceSectionSubHeader}>FUTURE PAYMENT</div>
                     <div style={{ marginBottom: "2.2rem" }} className={styles.flex}>
                         <div className={styles.header}>Experience that grows with your scale</div>
-                        <div>Design a financial operating system that works for your business and streamlined cash flow managment</div>
+                        <div>Build a unified compliance and financial operations system that enhances oversight and simplifies risk management.</div>
                     </div>
                     <div className={styles.flex}>
                         {experinceList.map((exp) => (
@@ -153,17 +174,17 @@ export default function Home() {
                         <p>Businesses already running on Smart Analysis</p>
                     </div>
                     <div style={{ justifyContent: "start", rowGap: "3rem" }} className={styles.statsCard}>
-                        <p>Instant Withdraw your funds at any time</p>
+                        <p>Instant insights into risk, anomalies, and compliance red flags.</p>
                         <div className={styles.bankAnomally}>
-                            <span className={styles.anoIcon}><Smartphone size={30} /></span>
-                            <span className={styles.anoIcon}><ArrowLeftRight style={{ transform: "scaleX(1)", display: "block" }} /></span>
-                            <span className={styles.anoIcon}><Landmark size={30} /></span>
+                            <span className={styles.anoIcon}><FileSearch size={30} /></span>
+                            <span className={styles.anoIcon}><img src={"/transfer.png"} style={{ height: "4rem", width: "5.2rem" }} /></span>
+                            <span className={styles.anoIcon}><AlertTriangle size={30} /></span>
                         </div>
                     </div>
                     <div className={styles.statsCard} style={{ flexBasis: "36rem" }}>
                         <div className={styles.graphStates}>
-                            <h5>No assets volatillity</h5>
-                            <p>Generate returns on your casg reserves without making any investments</p>
+                            <h5>No exposure to asset.</h5>
+                            <p>Strengthen cash-management accuracy while maintaining a fully non-investment posture</p>
                         </div>
                         <div className={styles.graphsStatesLineCard}>
                             <div className={styles.lineChartWrapper}>
@@ -184,16 +205,20 @@ export default function Home() {
                 </div>
             </div>
             <div className={styles.confidenceSection}>
-                <div className={styles.confidenceSectionSubHeader}>FUTURE PAYMENT</div>
+                <div className={styles.confidenceSectionSubHeader}>DUE DILIGENCE WORKFLOW</div>
+
                 <div className={styles.confidenceHeader}>
-                    <div className={styles.confidenceTitle}>Maximize your returns with a Reserve account that generates</div>
+                    <div className={styles.confidenceTitle}>
+                        Strengthen your compliance process with a structured review workflow
+                    </div>
                 </div>
+
                 <div className={styles.stepsWrap}>
-                    {[1, 2, 3].map((item) => (
-                        <div className={styles.steps}>
-                            <h3>{item}</h3>
-                            <h5>Open your account</h5>
-                            <p>create a financial experienceay and automate repeat purchases by scheduling</p>
+                    {dueDiligenceStages.map((item, index) => (
+                        <div key={index} className={styles.steps}>
+                            <h3>{item.step}</h3>
+                            <h5>{item.title}</h5>
+                            <p>{item.description}</p>
                         </div>
                     ))}
                 </div>
@@ -235,16 +260,23 @@ export default function Home() {
             </div>
             <div className={styles.contactUsSection}>
                 <div className={styles.contactUsWrapper}>
-                    <div className={styles.contactUsSubTitle}>TRY IT NOW</div>
+                    <div className={styles.contactUsSubTitle}>START YOUR REVIEW</div>
+
                     <div className={styles.contactUsFlex}>
                         <div className={styles.contactUsRowItem}>
-                            <div className={styles.contactUsHeader}>Ready to level up your payment process?</div>
+                            <div className={styles.contactUsHeader}>
+                                Ready to streamline your due-diligence workflow?
+                            </div>
+
                             <p className={styles.contactUsDescr}>
-                                Supports small business with simple invoicong powerful integrations and cash flow managment tools
+                                Smart Analysis automates risk checks, document verification, and
+                                compliance reporting—helping your team move faster with greater accuracy.
                             </p>
                         </div>
+
                         <div className={styles.contactUsFlexItem}>
                             <button className={styles.btnPrimary}>Get Started Now</button>
+
                             <button className={styles.btnOutlined}>
                                 <span>Learn More</span>
                                 <ArrowRight style={{ transform: "rotate(310deg)" }} />

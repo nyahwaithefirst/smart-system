@@ -310,7 +310,7 @@
 
 .statsCard > .bankAnomally {
   display: flex;
-  column-gap: 3.5rem;
+  column-gap: 2rem;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -563,6 +563,8 @@
 
 .contactUsSubTitle {
   color: #2563eb;
+  margin-bottom: 1rem;
+  font-size: 14px;
 }
 
 .contactUsFlex {

@@ -151,14 +151,14 @@ const SocialMediaResults = ({ setDataSubmitted, results }) => {
                                 <tr key={i}>
                                     <td>{row.entity_name || "N/A"}</td>
                                     <td>{Array.isArray(row.social_handles) ? row.social_handles.join(", ") : row.social_handles || "N/A"}</td>
-                                    <td>{Array.isArray(row.profile_url) ? row.profile_url.join(", ") : row.profile_url || "N/A"}</td>
+                                    {/* <td>{Array.isArray(row.profile_url) ? row.profile_url.join(", ") : row.profile_url || "N/A"}</td> */}
                                     <td>{Array.isArray(row.platform) ? row.platform.join(", ") : row.platform || "N/A"}</td>
-                                    <td>{Array.isArray(row.verified_status) ? row.verified_status.join(", ") : (row.verified_status !== undefined ? String(row.verified_status) : "N/A")}</td>
+                                    {/*<td>{Array.isArray(row.verified_status) ? row.verified_status.join(", ") : (row.verified_status !== undefined ? String(row.verified_status) : "N/A")}</td>
                                     <td>{Array.isArray(row.account_type) ? row.account_type.join(", ") : row.account_type || "N/A"}</td>
                                     <td>{Array.isArray(row.profile_created_date) ? row.profile_created_date.join(", ") : row.profile_created_date || "N/A"}</td>
                                     <td>{row.location || "N/A"}</td>
                                     <td>{Array.isArray(row.activity_level) ? row.activity_level.join(", ") : row.activity_level || "N/A"}</td>
-                                    <td>{row.total_posts !== undefined ? row.total_posts : "N/A"}</td>
+                                    <td>{row.total_posts !== undefined ? row.total_posts : "N/A"}</td> */}
                                 </tr>
                             ))}
                         </tbody>
